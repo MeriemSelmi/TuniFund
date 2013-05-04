@@ -2,6 +2,8 @@ package tn.startupfactory.tunifund;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
@@ -10,6 +12,15 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		SharedPreferences pref = getApplicationContext().getSharedPreferences("UserSession", 0); // 0 - for private mode
+		Editor editor = pref.edit();
+		if(pref.getInt("id", 0)==0){
+			
+			
+		}
+			
+		
 	}
 
 	@Override

@@ -1,7 +1,9 @@
 package tn.startupfactory.tunifund;
 
+import tn.startupfactory.tunifund.interfaceM.InscriptionActivity;
 import tn.startupfactory.tunifund.service.ProjectService;
 import tn.startupfactory.tunifund.servicemock.ProjectMock;
+import tn.startupfactory.tunifund.session.ApplicationSession;
 import tn.startupfactoy.tunifund.domain.Project;
 import tn.startupfactoy.tunifund.domain.User;
 import android.os.Bundle;
@@ -22,6 +24,7 @@ public class AddProjectActivity extends Activity {
 	EditText theme;
 	Button valider;
 	Button cancel;
+	ApplicationSession appSession;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,10 +40,19 @@ public class AddProjectActivity extends Activity {
 	}
 	
 	public void addProject(View v){
-		ProjectService ProjectService = ProjectMock.getInstance();
+		if (name.equals("") || description.equals("")||amount.equals("")||country.equals("")||dayToGo.equals("")||theme.equals("")) {
+			Toast.makeText(AddProjectActivity.this,
+					"Les champs sont obligatoires",
+					Toast.LENGTH_SHORT).show();
+			return;
+		}
+		
+		ProjectService projectService = ProjectMock.getInstance();
 		Project project=new Project(name.getText().toString(),description.getText().toString(),Double.valueOf(amount.getText().toString()),Integer.parseInt(dayToGo.getText().toString()),theme.getText().toString(),new User(),country.getText().toString());
+		String userid = appSession.getId();		
+		projectService.add(Integer.parseInt(userid), project);
 		Toast.makeText(AddProjectActivity.this,"projet ajouté!",Toast.LENGTH_SHORT).show();
-		Intent intent=new Intent(AddProjectActivity.this,MainActivity.class);
+		Intent intent=new Intent(AddProjectActivity.this,HomeActivity.class);
 		startActivity(intent);
 		
 	}
