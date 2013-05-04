@@ -2,6 +2,7 @@ package tn.startupfactory.tunifund.interfaceM;
 
 import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.service.UserService;
+import tn.startupfactory.tunifund.servicemock.UserMock;
 import tn.startupfactoy.tunifund.domain.User;
 import android.app.Activity;
 import android.content.Intent;
@@ -34,7 +35,7 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
 	@Override
 	public void onClick(View v) {
 		
-		UserService userBdd= new UserMock(this);
+		UserService userBdd= UserMock.getInstance();
 		if(v==valider)
 		{
 			//créer un nouveau utilisateur
@@ -42,7 +43,7 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
 			//ouvrir la base des données
 			userBdd.add(user);
 			//insertion
-			long i=userBdd.insertUser(user);
+			long i=userBdd.add(user);
 			if(i>=0)
 				
 			Toast.makeText(InscriptionActivity.this,"utilisateur ajouté!",Toast.LENGTH_SHORT).show();

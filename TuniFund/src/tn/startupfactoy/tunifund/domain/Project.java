@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Project {
 
-	private String id;
+	private int id;
 	private String name;
 	private String description;
 	private double required;
@@ -17,7 +17,7 @@ public class Project {
 	private Date date;
 	private int daysToGo;
 	private String theme;
-	private List<Image> images;
+	private String image;
 	
 	private User founder;
 	private Map<User, Double> donators;
@@ -34,9 +34,9 @@ public class Project {
 		this.required = required;
 	}
 
-	public Project(String id, String name, String description, double required,
+	public Project(int id, String name, String description, double required,
 			double funded, double pledged, String country, Date date,
-			int daysToGo, String theme, List<Image> images, User founder,
+			int daysToGo, String theme, String image, User founder,
 			Map<User, Double> donators) {
 		super();
 		this.id = id;
@@ -49,16 +49,16 @@ public class Project {
 		this.date = date;
 		this.daysToGo = daysToGo;
 		this.theme = theme;
-		this.images = images;
+		this.image = image;
 		this.founder = founder;
 		this.donators = donators;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -134,12 +134,12 @@ public class Project {
 		this.theme = theme;
 	}
 
-	public List<Image> getImageLinks() {
-		return images;
+	public String getImage() {
+		return image;
 	}
 
-	public void setImageLinks(List<Image> imageLinks) {
-		this.images = imageLinks;
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 	public User getFounder() {

@@ -8,7 +8,7 @@ import java.util.Map;
 public class User {
 	
 	private static int ID=0;
-	private String id;
+	private int id;
 	private String cin;
 	private String name;
 	private String lastName;
@@ -16,14 +16,14 @@ public class User {
 	private String telephone;
 	private String address;
 	private String password;
-	private Account account;
+	private double account;
 	private List<Project> fundedProjects;
 	private Map<Project, Double> donatedProjects;
 	
 	public User() {
 		super();
-		this.id = ID++ +"";
-		this.account = new Account(id, 1000);
+		this.id = ID++;
+		this.account =  1000;
 		this.fundedProjects = new ArrayList<Project>();
 		this.donatedProjects = new HashMap<Project, Double>();
 	}
@@ -31,8 +31,8 @@ public class User {
 	public User(String cin, String name, String lastName, String email,
 			String telephone, String address, String password) {
 		super();
-		this.id = ID++ +"";
-		this.account = new Account(id, 1000);
+		this.id = ID++;
+		this.account =  1000;
 		this.cin = cin;
 		this.name = name;
 		this.lastName = lastName;
@@ -40,7 +40,7 @@ public class User {
 		this.telephone = telephone;
 		this.address = address;
 		this.password = password;
-		this.account = new Account(id, 1000);
+		this.account = 1000;
 		this.fundedProjects = new ArrayList<Project>();
 		this.donatedProjects = new HashMap<Project, Double>();
 	}
@@ -51,7 +51,7 @@ public class User {
 		this.password = password;
 	}
 
-	public User(String id, String cin, String name, String lastName,
+	public User(int id, String cin, String name, String lastName,
 			String email, String telephone, String address, String password,
 			List<Project> fundedProjects, Map<Project, Double> donatedProjects) {
 		super();
@@ -67,11 +67,11 @@ public class User {
 		this.donatedProjects = donatedProjects;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -147,11 +147,11 @@ public class User {
 		this.donatedProjects = donatedProjects;
 	}
 
-	public Account getAccount() {
+	public double getAccount() {
 		return account;
 	}
 
-	public void setAccount(Account account) {
+	public void setAccount(double account) {
 		this.account = account;
 	}
 	
