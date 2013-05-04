@@ -30,13 +30,14 @@ public class Project {
 		this.id = ID++;
 	}	
 	
-	public Project(String name, String description, double required, int daysToGo, String theme, User founder) {
+	public Project(String name, String description, double required, int daysToGo, String theme, User founder, String country) {
 		this.id = ID++;
 		this.name = name;
 		this.description = description;
 		this.required = required;
 		this.daysToGo = daysToGo;
 		this.theme = theme;
+		this.country = country;
 		this.founder = founder;
 		this.donators = new HashMap<User, Double>();
 	}

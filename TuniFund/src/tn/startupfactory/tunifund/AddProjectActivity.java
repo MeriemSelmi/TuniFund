@@ -38,16 +38,15 @@ public class AddProjectActivity extends Activity {
 	
 	public void addProject(View v){
 		ProjectService ProjectService = ProjectMock.getInstance();
-		Project project=new Project(name.getText().toString(),description.getText().toString(),Double.valueOf(amount.getText().toString()),Integer.parseInt(dayToGo.getText().toString()),theme.getText().toString(),new User(),.getText().toString());
-		Toast.makeText(InscriptionActivity.this,"projet ajouté!",Toast.LENGTH_SHORT).show();
-		Intent intent=new Intent(InscriptionActivity.this,MainActivity.class);
+		Project project=new Project(name.getText().toString(),description.getText().toString(),Double.valueOf(amount.getText().toString()),Integer.parseInt(dayToGo.getText().toString()),theme.getText().toString(),new User(),country.getText().toString());
+		Toast.makeText(AddProjectActivity.this,"projet ajouté!",Toast.LENGTH_SHORT).show();
+		Intent intent=new Intent(AddProjectActivity.this,MainActivity.class);
 		startActivity(intent);
 		
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.add_project, menu);
 		return true;
 	}
