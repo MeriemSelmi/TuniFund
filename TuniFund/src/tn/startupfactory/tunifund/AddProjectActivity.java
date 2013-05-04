@@ -1,9 +1,8 @@
 package tn.startupfactory.tunifund;
 
+import tn.startupfactory.tunifund.service.ProjectService;
+import tn.startupfactory.tunifund.servicemock.ProjectMock;
 import tn.startupfactoy.tunifund.domain.Project;
-import android.iac.sql.User;
-import android.iac.sqlitedemo.InscriptionActivity;
-import android.iac.sqlitedemo.MainActivity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -39,13 +38,7 @@ public class AddProjectActivity extends Activity {
 	public void addProject(View v){
 		ProjectService ProjectService = ProjectMock.getInstance();
 		Project project=new Project(name.getText().toString(),description.getText().toString(),country.getText().toString(),dayToGo.getText().toString(),theme.getText().toString());
-		long i=userBdd.insertUser(user);
-		if(i>=0)
-			
-		Toast.makeText(InscriptionActivity.this,"utilisateur ajouté!",Toast.LENGTH_SHORT).show();
-		else
-			Toast.makeText(InscriptionActivity.this,"probléme d'ajout!",Toast.LENGTH_SHORT).show();	
-		userBdd.close();
+		Toast.makeText(InscriptionActivity.this,"projet ajouté!",Toast.LENGTH_SHORT).show();
 		Intent intent=new Intent(InscriptionActivity.this,MainActivity.class);
 		startActivity(intent);
 		
