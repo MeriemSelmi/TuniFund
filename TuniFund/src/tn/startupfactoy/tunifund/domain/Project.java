@@ -1,6 +1,7 @@
 package tn.startupfactoy.tunifund.domain;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -29,12 +30,15 @@ public class Project {
 		this.id = ID++;
 	}	
 	
-	public Project(String name, double required, int daysToGo, String theme) {
+	public Project(String name, String description, double required, int daysToGo, String theme, User founder) {
 		this.id = ID++;
 		this.name = name;
+		this.description = description;
 		this.required = required;
 		this.daysToGo = daysToGo;
 		this.theme = theme;
+		this.founder = founder;
+		this.donators = new HashMap<User, Double>();
 	}
 
 
@@ -43,6 +47,7 @@ public class Project {
 		this.id = ID++;
 		this.name = name;
 		this.required = required;
+		this.donators = new HashMap<User, Double>();
 	}
 
 	public Project(int id, String name, String description, double required,

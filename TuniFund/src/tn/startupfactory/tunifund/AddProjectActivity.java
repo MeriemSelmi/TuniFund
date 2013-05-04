@@ -3,6 +3,7 @@ package tn.startupfactory.tunifund;
 import tn.startupfactory.tunifund.service.ProjectService;
 import tn.startupfactory.tunifund.servicemock.ProjectMock;
 import tn.startupfactoy.tunifund.domain.Project;
+import tn.startupfactoy.tunifund.domain.User;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -37,7 +38,7 @@ public class AddProjectActivity extends Activity {
 	
 	public void addProject(View v){
 		ProjectService ProjectService = ProjectMock.getInstance();
-		Project project=new Project(name.getText().toString(),description.getText().toString(),country.getText().toString(),dayToGo.getText().toString(),theme.getText().toString());
+		Project project=new Project(name.getText().toString(),description.getText().toString(),Double.valueOf(amount.getText().toString()),Integer.parseInt(dayToGo.getText().toString()),theme.getText().toString(),new User(),.getText().toString());
 		Toast.makeText(InscriptionActivity.this,"projet ajouté!",Toast.LENGTH_SHORT).show();
 		Intent intent=new Intent(InscriptionActivity.this,MainActivity.class);
 		startActivity(intent);
