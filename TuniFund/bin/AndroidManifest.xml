@@ -16,11 +16,7 @@
         <activity
             android:name="tn.startupfactory.tunifund.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <activity
             android:name="tn.startupfactory.tunifund.HomeActivity"
@@ -49,6 +45,15 @@
         <activity
             android:name="tn.startupfactory.tunifund.interfaceM.PdfActivity"
             android:label="@string/title_activity_pdf" >
+        </activity>
+        <activity
+            android:name="tn.startupfactory.tunifund.splashscreen.SpalshScreenActivity"
+            android:label="@string/title_activity_spalsh_screen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

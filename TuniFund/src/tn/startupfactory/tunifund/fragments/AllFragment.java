@@ -1,4 +1,4 @@
-package tn.startupfactory.tunifund.fragments;
+/*package tn.startupfactory.tunifund.fragments;
 
 import java.util.List;
 
@@ -55,3 +55,4 @@ public class AllFragment extends Fragment{
 	
 
 }
+*/
