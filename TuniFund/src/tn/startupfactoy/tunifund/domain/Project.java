@@ -6,6 +6,7 @@ import java.util.Map;
 
 public class Project {
 
+	private static int ID=0;
 	private int id;
 	private String name;
 	private String description;
@@ -25,11 +26,21 @@ public class Project {
 	
 	
 	public Project() {
-		super();
+		this.id = ID++;
 	}	
+	
+	public Project(String name, double required, int daysToGo, String theme) {
+		this.id = ID++;
+		this.name = name;
+		this.required = required;
+		this.daysToGo = daysToGo;
+		this.theme = theme;
+	}
+
+
 
 	public Project(String name, double required) {
-		super();
+		this.id = ID++;
 		this.name = name;
 		this.required = required;
 	}
