@@ -6,7 +6,7 @@ import tn.startupfactoy.tunifund.domain.User;
 
 public class UserMock implements UserService {
 
-	public static UserMock USERMOCK;
+	private static UserMock USERMOCK;
 	List<User> users; 
 	
 	private UserMock() {
