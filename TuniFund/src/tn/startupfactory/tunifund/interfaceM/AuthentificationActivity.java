@@ -40,6 +40,13 @@ public class AuthentificationActivity extends Activity implements
 			// passe entrés
 			User user = userBdd.login(cin.getText().toString(), pass.getText()
 					.toString());
+			
+			if (cin.equals("") || pass.equals("")) {
+				Toast.makeText(AuthentificationActivity.this,
+						"Les champs sont obligatoires",
+						Toast.LENGTH_SHORT).show();
+				return;
+			}
 			if (user == null) {
 				Toast.makeText(AuthentificationActivity.this,
 						"Authentification non valide!", Toast.LENGTH_LONG)
@@ -51,8 +58,6 @@ public class AuthentificationActivity extends Activity implements
 				Intent intent = new Intent(AuthentificationActivity.this,
 						ActivitySuiv.class);
 				// intent.putExtra("nom",nom);
-				// intent.putExtra("date", date_n);
-
 				startActivity(intent);
 
 			}
