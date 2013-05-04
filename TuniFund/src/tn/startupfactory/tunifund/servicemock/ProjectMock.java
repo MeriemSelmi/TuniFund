@@ -37,6 +37,7 @@ public class ProjectMock implements ProjectService {
 	public void donate(int idDonator, int idProject, double amount) {
 		User donator = userMock.getById(idDonator);
 		Project project = getById(idProject);
+		project.getDonators().put(key, value);
 		donator.getDonatedProjects().put(key, value)
 
 	}
