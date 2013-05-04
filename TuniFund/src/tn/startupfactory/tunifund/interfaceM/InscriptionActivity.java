@@ -1,5 +1,10 @@
 package tn.startupfactory.tunifund.interfaceM;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import com.tutos.android.ui.MainActivity;
+
 import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.service.UserService;
 import tn.startupfactory.tunifund.servicemock.UserMock;
@@ -40,6 +45,32 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
 		{
 			//créer un nouveau utilisateur
 			User user = new User(cin.getText().toString(),name.getText().toString(),lastname.getText().toString(),email.getText().toString(),telephone.getText().toString(),address.getText().toString(),password.getText().toString());
+			if (cin.equals("") || name.equals("")||lastname.equals("")||email.equals("")||telephone.equals("")||address.equals("")||password.equals("")) {
+				Toast.makeText(InscriptionActivity.this,
+						"Les champs sont obligatoires",
+						Toast.LENGTH_SHORT).show();
+				return;
+			}
+
+			// On déclare le pattern que l’on doit suivre
+			Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
+			// On déclare un matcher, qui comparera le pattern avec la
+			// string passée en argument
+			Matcher m = p.matcher(email.toString());
+			// Si l’adresse mail saisie ne correspond au format d’une
+			// adresse mail
+			if (!m.matches()) {
+				// Toast est une classe fournie par le SDK Android
+				// pour afficher les messages dans des minis pop up
+				// Le premier argument est le Context, puis
+				// le message et à la fin la durée de ce dernier
+				Toast.makeText(InscriptionActivity.this,
+						"Le champs email ne correspond pas au format d'une adresse mail", Toast.LENGTH_SHORT)
+						.show();
+				return;
+			}
+			
+			
 			//ouvrir la base des données
 			userBdd.add(user);
 			//insertion

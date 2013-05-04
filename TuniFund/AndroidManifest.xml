@@ -30,6 +30,10 @@
             android:name="tn.startupfactory.tunifund.interfaceM.AuthentificationActivity"
             android:label="@string/title_activity_authentification" >
         </activity>
+        <activity
+            android:name="tn.startupfactory.tunifund.interfaceM.DesciptionActivity"
+            android:label="@string/title_activity_desciption" >
+        </activity>
     </application>
 
 </manifest>
