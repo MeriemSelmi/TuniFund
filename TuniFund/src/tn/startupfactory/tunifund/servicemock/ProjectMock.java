@@ -35,7 +35,9 @@ public class ProjectMock implements ProjectService {
 
 	@Override
 	public void donate(int idDonator, int idProject, double amount) {
-		// TODO Auto-generated method stub
+		User donator = userMock.getById(idDonator);
+		Project project = getById(idProject);
+		donator.getDonatedProjects().put(key, value)
 
 	}
 
