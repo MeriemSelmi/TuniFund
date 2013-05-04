@@ -4,6 +4,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import tn.startupfactory.tunifund.R;
+
+
 public class Project {
 
 	private static int ID=0;
@@ -18,7 +21,7 @@ public class Project {
 	private Date date;
 	private int daysToGo;
 	private String theme;
-	private String image;
+	private int image;
 	
 	private User founder;
 	private Map<User, Double> donators;
@@ -30,7 +33,7 @@ public class Project {
 		founder = new User();
 		donators = new HashMap<User, Double>();
 	}	
-	
+
 	public Project(String name, String description, double required, int daysToGo, String theme, User founder, String country) {
 		this.id = ID++;
 		this.name = name;
@@ -41,6 +44,7 @@ public class Project {
 		this.country = country;
 		this.founder = founder;
 		this.donators = new HashMap<User, Double>();
+		this.image = getImageFromTheme();
 	}
 
 
@@ -54,7 +58,7 @@ public class Project {
 
 	public Project(int id, String name, String description, double required,
 			double funded, double pledged, String country, Date date,
-			int daysToGo, String theme, String image, User founder,
+			int daysToGo, String theme, int image, User founder,
 			Map<User, Double> donators) {
 		super();
 		this.id = id;
@@ -153,11 +157,11 @@ public class Project {
 		this.theme = theme;
 	}
 
-	public String getImage() {
+	public int getImage() {
 		return image;
 	}
 
-	public void setImage(String image) {
+	public void setImage(int image) {
 		this.image = image;
 	}
 
@@ -185,6 +189,17 @@ public class Project {
 		this.fundedPercentage = fundedPercentage;
 	}
 	
-	
+	private int getImageFromTheme() {
+		if(theme.equals(Theme.ART)){
+			return R.drawable.project_art;
+		}
+		if(theme.equals(Theme.SCIENCE)){
+			return R.drawable.project_science;
+		}
+		if(theme.equals(Theme.ART)){
+			return R.drawable.project_art;
+		}
+		return R.drawable.project_default;
+	}
 	
 }
