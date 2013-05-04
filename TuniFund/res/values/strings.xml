@@ -10,6 +10,7 @@
     <string name="title_activity_inscription">InscriptionActivity</string>
     <string name="title_activity_authentification">AuthentificationActivity</string>
     <string name="title_activity_desciption">DesciptionActivity</string>
+    <string name="title_project">Project</string>
 
 
 </resources>

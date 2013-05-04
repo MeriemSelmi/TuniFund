@@ -22,37 +22,46 @@ public final class R {
     }
     public static final class drawable {
         public static final int annuler=0x7f020000;
-        public static final int floor=0x7f020001;
-        public static final int ic_action_search=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int inscri=0x7f020004;
+        public static final int ic_action_search=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int inscri=0x7f020003;
+        public static final int project_technology=0x7f020004;
         public static final int valid=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f080017;
+        public static final int action_settings=0x7f080020;
         public static final int addProject=0x7f080006;
-        public static final int address=0x7f080011;
-        public static final int annuler=0x7f080012;
+        public static final int address=0x7f08001a;
+        public static final int annuler=0x7f08001b;
         public static final int cancelProject=0x7f080007;
+        public static final int categorie=0x7f08000e;
         public static final int cin=0x7f080008;
-        public static final int email=0x7f08000f;
-        public static final int gridview=0x7f08000c;
-        public static final int image=0x7f080013;
+        public static final int description=0x7f080013;
+        public static final int email=0x7f080018;
+        public static final int funded=0x7f08000f;
+        public static final int gridview=0x7f080015;
+        public static final int image=0x7f08001c;
+        public static final int imageView1=0x7f08000d;
         public static final int inscri=0x7f08000b;
-        public static final int lastname=0x7f08000e;
-        public static final int menu_settings=0x7f080016;
-        public static final int name=0x7f08000d;
-        public static final int nom=0x7f080014;
+        public static final int lastname=0x7f080017;
+        public static final int menu_settings=0x7f08001f;
+        public static final int name=0x7f080016;
+        public static final int nom=0x7f08001d;
         public static final int pass=0x7f080009;
+        public static final int pledged=0x7f080010;
         public static final int projectAmount=0x7f080002;
         public static final int projectCountry=0x7f080003;
         public static final int projectDaysToGo=0x7f080004;
         public static final int projectDescription=0x7f080001;
         public static final int projectName=0x7f080000;
         public static final int projectTheme=0x7f080005;
-        public static final int telephone=0x7f080010;
+        public static final int required=0x7f080012;
+        public static final int telephone=0x7f080019;
+        public static final int textView1=0x7f08000c;
+        public static final int text_descrip=0x7f080014;
+        public static final int to_go=0x7f080011;
         public static final int valid=0x7f08000a;
-        public static final int viewpager=0x7f080015;
+        public static final int viewpager=0x7f08001e;
     }
     public static final class layout {
         public static final int activity_add_project=0x7f030000;
@@ -83,6 +92,7 @@ public final class R {
         public static final int title_activity_desciption=0x7f050008;
         public static final int title_activity_home=0x7f050003;
         public static final int title_activity_inscription=0x7f050006;
+        public static final int title_project=0x7f050009;
     }
     public static final class style {
         /** 
