@@ -55,50 +55,34 @@ public final class R {
         public static final int viewpager=0x7f080015;
     }
     public static final class layout {
-<<<<<<< HEAD
-        public static final int activity_main=0x7f030000;
-        public static final int authentification=0x7f030001;
-        public static final int desciption_projet=0x7f030002;
-        public static final int inscription=0x7f030003;
-    }
-    public static final class menu {
-        public static final int activity_main=0x7f070000;
-        public static final int authentification=0x7f070001;
-        public static final int desciption=0x7f070002;
-        public static final int inscription=0x7f070003;
-=======
         public static final int activity_add_project=0x7f030000;
         public static final int activity_home=0x7f030001;
         public static final int activity_main=0x7f030002;
         public static final int authentification=0x7f030003;
-        public static final int fragment_layout=0x7f030004;
-        public static final int inscription=0x7f030005;
-        public static final int item_project=0x7f030006;
-        public static final int projects_layout=0x7f030007;
+        public static final int desciption_projet=0x7f030004;
+        public static final int fragment_layout=0x7f030005;
+        public static final int inscription=0x7f030006;
+        public static final int item_project=0x7f030007;
+        public static final int projects_layout=0x7f030008;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;
         public static final int add_project=0x7f070001;
         public static final int authentification=0x7f070002;
-        public static final int home=0x7f070003;
-        public static final int inscription=0x7f070004;
->>>>>>> dd590b179d9c546ea616d4f3cf0c8056ea3be6db
+        public static final int desciption=0x7f070003;
+        public static final int home=0x7f070004;
+        public static final int inscription=0x7f070005;
     }
     public static final class string {
         public static final int action_settings=0x7f050004;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050001;
         public static final int menu_settings=0x7f050002;
-<<<<<<< HEAD
-        public static final int title_activity_authentification=0x7f050005;
-        public static final int title_activity_desciption=0x7f050006;
-        public static final int title_activity_inscription=0x7f050003;
-=======
         public static final int title_activity_add_project=0x7f050005;
         public static final int title_activity_authentification=0x7f050007;
+        public static final int title_activity_desciption=0x7f050008;
         public static final int title_activity_home=0x7f050003;
         public static final int title_activity_inscription=0x7f050006;
->>>>>>> dd590b179d9c546ea616d4f3cf0c8056ea3be6db
     }
     public static final class style {
         /** 
