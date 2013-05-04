@@ -26,6 +26,10 @@
             android:name="tn.startupfactory.tunifund.HomeActivity"
             android:label="@string/title_activity_home" >
         </activity>
+        <activity
+            android:name="tn.startupfactory.tunifund.AddProjectActivity"
+            android:label="@string/title_activity_add_project" >
+        </activity>
     </application>
 
 </manifest>
