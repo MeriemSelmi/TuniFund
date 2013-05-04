@@ -1,5 +1,6 @@
 package tn.startupfactory.tunifund.servicemock;
 
+import java.util.ArrayList;
 import java.util.List;
 import tn.startupfactory.tunifund.service.UserService;
 import tn.startupfactoy.tunifund.domain.User;
@@ -10,7 +11,7 @@ public class UserMock implements UserService {
 	List<User> users; 
 	
 	private UserMock() {
-		super();
+		users = new ArrayList<User>();
 		users.add(new User("cin1", "Mariem", "Nfaiedh", "mariem@nfaiedh.com", "12345", "Tunis", "mariem"));
 		users.add(new User("cin2", "Balkis", "Khouni", "balkis@khouni.com", "12345", "Tunis", "balkis"));
 		users.add(new User("cin3", "Meriem", "Selmi", "meriem@selmi.com", "12345", "Tunis", "meriem"));

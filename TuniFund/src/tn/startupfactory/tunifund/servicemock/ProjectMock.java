@@ -1,9 +1,12 @@
 package tn.startupfactory.tunifund.servicemock;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
-
 import tn.startupfactory.tunifund.service.ProjectService;
 import tn.startupfactoy.tunifund.domain.Project;
+import tn.startupfactoy.tunifund.domain.Theme;
 import tn.startupfactoy.tunifund.domain.User;
 
 public class ProjectMock implements ProjectService {
@@ -13,10 +16,12 @@ public class ProjectMock implements ProjectService {
 	List<Project> projects; 
 	
 	
-	
 	private ProjectMock() {
-		super();
 		userMock = UserMock.getInstance();
+		projects = new ArrayList<Project>();
+		projects.add(new Project("Projet1", "Blablabladescription", 300.000, 300, Theme.SCIENCE, userMock.getById(1), "Qayrawen"));
+		projects.add(new Project("Projet2", "Blablabladescription2", 300.000, 300, Theme.TECHNOLOGY, userMock.getById(1), "Gabes"));
+		projects.add(new Project("Projet3", "Blablabladescription3", 300.000, 300, Theme.ART, userMock.getById(2), "Tataouine"));
 	}
 
 	@Override
@@ -36,28 +41,43 @@ public class ProjectMock implements ProjectService {
 	@Override
 	public void donate(int idDonator, int idProject, double amount) {
 		User donator = userMock.getById(idDonator);
+		//project.pledged w user.account////////////////////////////////////////////////
 		Project project = getById(idProject);
-		project.getDonators().put(key, value);
-		donator.getDonatedProjects().put(key, value)
+		project.getDonators().put(donator, amount);
+		donator.getDonatedProjects().put(project, amount);
+		
 
 	}
 
 	@Override
 	public Project getById(int id) {
-		// TODO Auto-generated method stub
+		for (Project project : projects) {
+			if(id == project.getId()){
+				return project;
+			}
+		}
 		return null;
 	}
 
 	@Override
 	public List<Project> getNewProjects() {
-		// TODO Auto-generated method stub
-		return null;
+		Date date = new Date();
+		Calendar c = Calendar.getInstance(); 
+		c.setTime(date); 
+		c.add(Calendar.DATE, -1);
+		date = c.getTime();
+		List<Project> newProject = new ArrayList<Project>();
+		for (Project project : projects) {
+			if(project.getDate().after(date)){
+				newProject.add(project);
+			}
+		}
+		return newProject;
 	}
 
 	@Override
 	public List<Project> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return projects;
 	}
 
 	public static ProjectMock getInstance(){
