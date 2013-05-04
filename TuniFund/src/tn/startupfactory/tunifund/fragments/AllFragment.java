@@ -50,8 +50,8 @@ public class AllFragment extends Fragment{
 		}
 
 		@Override
-		protected void onPostExecute(List<Project> hotels) {
-			gridView.setAdapter(new ProjectsAdapter(inflater, hotels));
+		protected void onPostExecute(List<Project> projects) {
+			gridView.setAdapter(new ProjectsAdapter(inflater, projects));
 		}
 	}
 	

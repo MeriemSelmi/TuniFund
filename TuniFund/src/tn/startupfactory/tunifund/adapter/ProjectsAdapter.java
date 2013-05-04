@@ -61,7 +61,7 @@ public class ProjectsAdapter extends BaseAdapter{
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		holder.image.setImageResource(titres.get(position).getId());
+		holder.image.setImageResource(titres.get(position).getImage());
 		holder.nom.setText(titres.get(position).getName());
 		return convertView;
 	

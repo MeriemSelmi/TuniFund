@@ -3,6 +3,7 @@ package tn.startupfactory.tunifund;
 import java.util.List;
 import java.util.Vector;
 
+
 import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.adapter.MyPagerAdapter;
 import tn.startupfactory.tunifund.fragments.AllFragment;
@@ -33,7 +34,10 @@ public class FragmentsSliderActivity extends FragmentActivity {
 	
 		this.mPagerAdapter = new MyPagerAdapter(super.getSupportFragmentManager(), fragments);
 
+		
 		ViewPager pager = (ViewPager) super.findViewById(R.id.viewpager);
 		pager.setAdapter(this.mPagerAdapter);
+		pager.setOffscreenPageLimit(2);
+		pager.setCurrentItem(3);
 	}
 }
