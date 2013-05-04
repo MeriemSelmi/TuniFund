@@ -26,6 +26,10 @@
             android:name="tn.startupfactory.tunifund.interfaceM.InscriptionActivity"
             android:label="@string/title_activity_inscription" >
         </activity>
+        <activity
+            android:name="tn.startupfactory.tunifund.interfaceM.AuthentificationActivity"
+            android:label="@string/title_activity_authentification" >
+        </activity>
     </application>
 
 </manifest>
