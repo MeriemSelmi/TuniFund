@@ -1,10 +1,13 @@
 package tn.startupfactoy.tunifund.domain;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class User {
-
+	
+	private static int ID=0;
 	private String id;
 	private String cin;
 	private String name;
@@ -19,8 +22,29 @@ public class User {
 	
 	public User() {
 		super();
+		this.id = ID++ +"";
+		this.account = new Account(id, 1000);
+		this.fundedProjects = new ArrayList<Project>();
+		this.donatedProjects = new HashMap<Project, Double>();
 	}
 	
+	public User(String cin, String name, String lastName, String email,
+			String telephone, String address, String password) {
+		super();
+		this.id = ID++ +"";
+		this.account = new Account(id, 1000);
+		this.cin = cin;
+		this.name = name;
+		this.lastName = lastName;
+		this.email = email;
+		this.telephone = telephone;
+		this.address = address;
+		this.password = password;
+		this.account = new Account(id, 1000);
+		this.fundedProjects = new ArrayList<Project>();
+		this.donatedProjects = new HashMap<Project, Double>();
+	}
+
 	public User(String cin, String password) {
 		super();
 		this.cin = cin;
