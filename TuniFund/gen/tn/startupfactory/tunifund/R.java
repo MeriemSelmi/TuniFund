@@ -30,22 +30,22 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f08000b;
-        public static final int address=0x7f080005;
-        public static final int annuler=0x7f080008;
+        public static final int address=0x7f080008;
+        public static final int annuler=0x7f080009;
         public static final int cin=0x7f080000;
-        public static final int email=0x7f080003;
-        public static final int inscri=0x7f080009;
-        public static final int lastname=0x7f080002;
+        public static final int email=0x7f080006;
+        public static final int inscri=0x7f080003;
+        public static final int lastname=0x7f080005;
         public static final int menu_settings=0x7f08000a;
-        public static final int name=0x7f080001;
-        public static final int pass=0x7f080006;
-        public static final int telephone=0x7f080004;
-        public static final int valid=0x7f080007;
+        public static final int name=0x7f080004;
+        public static final int pass=0x7f080001;
+        public static final int telephone=0x7f080007;
+        public static final int valid=0x7f080002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int inscription=0x7f030001;
-        public static final int main=0x7f030002;
+        public static final int authentification=0x7f030001;
+        public static final int inscription=0x7f030002;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;

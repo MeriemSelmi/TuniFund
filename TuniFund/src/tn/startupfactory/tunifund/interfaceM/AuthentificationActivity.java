@@ -19,7 +19,7 @@ public class AuthentificationActivity extends Activity implements View.OnClickLi
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.authentification);
         cin=(EditText)findViewById(R.id.cin);
         pass=(EditText)findViewById(R.id.pass);
         valider=(Button)findViewById(R.id.valid);
