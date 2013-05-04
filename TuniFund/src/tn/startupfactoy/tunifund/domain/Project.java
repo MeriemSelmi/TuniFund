@@ -2,7 +2,6 @@ package tn.startupfactoy.tunifund.domain;
 
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Project {
@@ -28,6 +27,8 @@ public class Project {
 	
 	public Project() {
 		this.id = ID++;
+		founder = new User();
+		donators = new HashMap<User, Double>();
 	}	
 	
 	public Project(String name, String description, double required, int daysToGo, String theme, User founder, String country) {
@@ -109,6 +110,7 @@ public class Project {
 
 	public void setFunded(double funded) {
 		this.funded = funded;
+		this.fundedPercentage = funded/required*100;
 	}
 
 	public double getPledged() {

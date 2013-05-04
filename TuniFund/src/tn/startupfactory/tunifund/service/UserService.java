@@ -10,7 +10,7 @@ public interface UserService {
 	public void remove(int id);
 	public User login(String cin, String password);
 	public User getById(int id);
-	public void debit(int id, double amount);
+	public void debit(int id, double amount) throws Exception;
 	public void credit(int id, double amount);
 	public List<User> findAll();
 }

@@ -55,13 +55,13 @@ public class UserMock implements UserService {
 	}
 
 	@Override
-	public void debit(int id, double amount) {
+	public void debit(int id, double amount) throws Exception{
 		User user = getById(id);
 		if(user != null ){
 			if(user.getAccount() > amount){
 				user.setAccount(user.getAccount() - amount);
 			}else{
-				//////////////////////////////////////////
+				throw new Exception("UserMock : You do not have enough money");
 			}
 		}
 	}

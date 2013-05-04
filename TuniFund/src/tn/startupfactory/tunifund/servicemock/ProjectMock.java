@@ -26,6 +26,7 @@ public class ProjectMock implements ProjectService {
 
 	@Override
 	public void add(int idFounder, Project project) {
+		project.setDate(new Date());
 		User founder = userMock.getById(idFounder);
 		founder.getFundedProjects().add(project);
 		project.setFounder(founder);
@@ -39,10 +40,12 @@ public class ProjectMock implements ProjectService {
 	}
 
 	@Override
-	public void donate(int idDonator, int idProject, double amount) {
+	public void donate(int idDonator, int idProject, double amount) throws Exception {
 		User donator = userMock.getById(idDonator);
-		//project.pledged w user.account////////////////////////////////////////////////
+		userMock.debit(donator.getId(), amount);
+		donator.setAccount(donator.getAccount()- amount);
 		Project project = getById(idProject);
+		project.setFunded(project.getFunded() + amount);
 		project.getDonators().put(donator, amount);
 		donator.getDonatedProjects().put(project, amount);
 		
