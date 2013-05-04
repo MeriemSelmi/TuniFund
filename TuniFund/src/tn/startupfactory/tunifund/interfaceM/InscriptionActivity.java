@@ -51,18 +51,11 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
 				return;
 			}
 
-			// On déclare le pattern que l’on doit suivre
+
 			Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
-			// On déclare un matcher, qui comparera le pattern avec la
-			// string passée en argument
 			Matcher m = p.matcher(email.toString());
-			// Si l’adresse mail saisie ne correspond au format d’une
-			// adresse mail
+
 			if (!m.matches()) {
-				// Toast est une classe fournie par le SDK Android
-				// pour afficher les messages dans des minis pop up
-				// Le premier argument est le Context, puis
-				// le message et à la fin la durée de ce dernier
 				Toast.makeText(InscriptionActivity.this,
 						"Le champs email ne correspond pas au format d'une adresse mail", Toast.LENGTH_SHORT)
 						.show();
@@ -70,9 +63,9 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
 			}
 			
 			
-			//ouvrir la base des données
+			
 			userBdd.add(user);
-			//insertion
+	
 			long i=userBdd.add(user);
 			if(i>=0)
 				
@@ -80,8 +73,7 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
 			else
 				Toast.makeText(InscriptionActivity.this,"probléme d'ajout!",Toast.LENGTH_SHORT).show();	
 			
-			//Intent intent=new Intent(InscriptionActivity.this,ActivitySuivante.class);
-			//startActivity(intent);
+			
 			
 		}
 		if(v==annuler)
@@ -93,3 +85,4 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
 	}
 
 }
+

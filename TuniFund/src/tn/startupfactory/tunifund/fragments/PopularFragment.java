@@ -3,6 +3,10 @@
 import java.util.List;
 
 import tn.startupfactory.tunifund.R;
+import tn.startupfactory.tunifund.adapter.ProjectsAdapter;
+import tn.startupfactory.tunifund.service.ProjectService;
+import tn.startupfactory.tunifund.servicemock.ProjectMock;
+import tn.startupfactoy.tunifund.domain.Project;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -35,19 +39,19 @@ public class PopularFragment extends Fragment{
 
 		@Override
 		protected List<Project> doInBackground(Void... params) {
-			List<Project> hotels = null;
+			List<Project> projects = null;
 			try {
-				ProjectService mockHotel = new ProjectMock();
-				projects = mockHotel.getAll();
+				ProjectService mockProject = ProjectMock.getInstance();
+				projects = mockProject.findAll();
 			} catch (Exception e) {
 				cancel(false);
 			}
-			return hotels;
+			return projects;
 		}
 
 		@Override
 		protected void onPostExecute(List<Project> hotels) {
-			gridView.setAdapter(new ListProjectAdapter(inflater, hotels));
+			gridView.setAdapter(new ProjectsAdapter(inflater, hotels));
 		}
 	}
 	
