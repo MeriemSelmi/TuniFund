@@ -22,17 +22,19 @@ public final class R {
     }
     public static final class drawable {
         public static final int annuler=0x7f020000;
-        public static final int ic_action_search=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int inscri=0x7f020003;
-        public static final int project_technology=0x7f020004;
-        public static final int valid=0x7f020005;
+        public static final int backgound=0x7f020001;
+        public static final int ic_action_search=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int inscri=0x7f020004;
+        public static final int project_technology=0x7f020005;
+        public static final int valid=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f080020;
+        public static final int action_settings=0x7f080021;
         public static final int addProject=0x7f080006;
         public static final int address=0x7f08001a;
         public static final int annuler=0x7f08001b;
+        public static final int btnNewFragment=0x7f08001e;
         public static final int cancelProject=0x7f080007;
         public static final int categorie=0x7f08000e;
         public static final int cin=0x7f080008;
@@ -44,7 +46,7 @@ public final class R {
         public static final int imageView1=0x7f08000d;
         public static final int inscri=0x7f08000b;
         public static final int lastname=0x7f080017;
-        public static final int menu_settings=0x7f08001f;
+        public static final int menu_settings=0x7f080020;
         public static final int name=0x7f080016;
         public static final int nom=0x7f08001d;
         public static final int pass=0x7f080009;
@@ -61,7 +63,7 @@ public final class R {
         public static final int text_descrip=0x7f080014;
         public static final int to_go=0x7f080011;
         public static final int valid=0x7f08000a;
-        public static final int viewpager=0x7f08001e;
+        public static final int viewpager=0x7f08001f;
     }
     public static final class layout {
         public static final int activity_add_project=0x7f030000;
@@ -72,7 +74,11 @@ public final class R {
         public static final int fragment_layout=0x7f030005;
         public static final int inscription=0x7f030006;
         public static final int item_project=0x7f030007;
-        public static final int projects_layout=0x7f030008;
+        public static final int page_droite_layout=0x7f030008;
+        public static final int page_gauche_layout=0x7f030009;
+        public static final int page_milieu_layout=0x7f03000a;
+        public static final int projects_layout=0x7f03000b;
+        public static final int viewpager=0x7f03000c;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;
@@ -121,5 +127,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int Pager=0x7f060002;
     }
 }

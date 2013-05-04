@@ -20,8 +20,7 @@ public class ProjectsAdapter extends BaseAdapter{
 	Integer[] images;
 	List<Project> titres;
 	
-	public ProjectsAdapter(LayoutInflater inflater, /* Integer[] images, */
-			List<Project> titres) {
+	public ProjectsAdapter(LayoutInflater inflater,List<Project> titres) {
 		super();
 		this.inflater = inflater;
 		this.titres = titres;
