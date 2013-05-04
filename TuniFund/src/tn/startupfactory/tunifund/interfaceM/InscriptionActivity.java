@@ -3,7 +3,6 @@ package tn.startupfactory.tunifund.interfaceM;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.tutos.android.ui.MainActivity;
 
 import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.service.UserService;
@@ -81,14 +80,14 @@ public class InscriptionActivity extends Activity implements View.OnClickListene
 			else
 				Toast.makeText(InscriptionActivity.this,"probléme d'ajout!",Toast.LENGTH_SHORT).show();	
 			
-			Intent intent=new Intent(InscriptionActivity.this,ActivitySuivante.class);
-			startActivity(intent);
+			//Intent intent=new Intent(InscriptionActivity.this,ActivitySuivante.class);
+			//startActivity(intent);
 			
 		}
 		if(v==annuler)
 		{
-			Intent intent=new Intent(InscriptionActivity.this,ActivitySuivante.class);
-			startActivity(intent);
+			//Intent intent=new Intent(InscriptionActivity.this,ActivitySuivante.class);
+			//startActivity(intent);
 			
 		}
 	}

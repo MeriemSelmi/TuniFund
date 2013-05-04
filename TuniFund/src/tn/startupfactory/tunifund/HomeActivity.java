@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Vector;
 
 import tn.startupfactory.tunifund.adapter.ViewPagerAdapter;
-import tn.startupfactory.tunifund.fragments.AllFragment;
+/*import tn.startupfactory.tunifund.fragments.AllFragment;
 import tn.startupfactory.tunifund.fragments.NewFragment;
-import tn.startupfactory.tunifund.fragments.PopularFragment;
+import tn.startupfactory.tunifund.fragments.PopularFragment;*/
 
 
 import android.os.Bundle;
@@ -27,7 +27,7 @@ public class HomeActivity extends FragmentActivity {
 		
 		
 		List<Fragment> fragments = new Vector<Fragment>();
-		fragments.add(Fragment.instantiate(this,
+		/*fragments.add(Fragment.instantiate(this,
 				NewFragment.class.getName()));
 		fragments
 				.add(Fragment.instantiate(this, PopularFragment.class.getName()));
@@ -40,7 +40,7 @@ public class HomeActivity extends FragmentActivity {
 		pager.setAdapter(adapter);
 
 		pager.setOffscreenPageLimit(2);
-		pager.setCurrentItem(3);
+		pager.setCurrentItem(3);*/
 		
 	}
 

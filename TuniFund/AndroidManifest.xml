@@ -29,19 +29,26 @@
         <activity
             android:name="tn.startupfactory.tunifund.AddProjectActivity"
             android:label="@string/title_activity_add_project" >
-        </activity> 
-		<activity
+        </activity>
+        <activity
             android:name="tn.startupfactory.tunifund.interfaceM.InscriptionActivity"
             android:label="@string/title_activity_inscription" >
         </activity>
         <activity
             android:name="tn.startupfactory.tunifund.interfaceM.AuthentificationActivity"
             android:label="@string/title_activity_authentification" >
-
         </activity>
         <activity
             android:name="tn.startupfactory.tunifund.interfaceM.DesciptionActivity"
             android:label="@string/title_activity_desciption" >
+        </activity>
+        <activity
+            android:name="tn.startupfactory.tunifund.interfaceM.DonateActivity"
+            android:label="@string/title_activity_donate" >
+        </activity>
+        <activity
+            android:name="tn.startupfactory.tunifund.interfaceM.PdfActivity"
+            android:label="@string/title_activity_pdf" >
         </activity>
     </application>
 

@@ -40,11 +40,11 @@ public class AuthentificationActivity extends Activity implements
 			// passe entrés
 			User user = userBdd.login(cin.getText().toString(), pass.getText()
 					.toString());
-			
+
 			if (cin.equals("") || pass.equals("")) {
 				Toast.makeText(AuthentificationActivity.this,
-						"Les champs sont obligatoires",
-						Toast.LENGTH_SHORT).show();
+						"Les champs sont obligatoires", Toast.LENGTH_SHORT)
+						.show();
 				return;
 			}
 			if (user == null) {
@@ -55,19 +55,19 @@ public class AuthentificationActivity extends Activity implements
 
 				String nom = user.getName();
 
-				Intent intent = new Intent(AuthentificationActivity.this,
-						ActivitySuiv.class);
-				// intent.putExtra("nom",nom);
-				startActivity(intent);
+				/*
+				 * Intent intent = new Intent(AuthentificationActivity.this,
+				 * ActivitySuiv.class); // intent.putExtra("nom",nom);
+				 * startActivity(intent);
+				 * 
+				 * } } else if (v == inscription) { Intent intent = new
+				 * Intent(AuthentificationActivity.this,
+				 * InscriptionActivity.class); startActivity(intent);
+				 */
 
 			}
-		} else if (v == inscription) {
-			Intent intent = new Intent(AuthentificationActivity.this,
-					InscriptionActivity.class);
-			startActivity(intent);
 
 		}
 
 	}
-
 }

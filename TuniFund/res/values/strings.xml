@@ -11,6 +11,7 @@
     <string name="title_activity_authentification">AuthentificationActivity</string>
     <string name="title_activity_desciption">DesciptionActivity</string>
     <string name="title_project">Project</string>
-
+    <string name="title_activity_donate">DonateActivity</string>
+    <string name="title_activity_pdf">PdfActivity</string>
 
 </resources>
