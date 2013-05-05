@@ -20,7 +20,6 @@
         <activity
             android:name="tn.startupfactory.tunifund.HomeActivity"
             android:label="@string/title_activity_home" >
-             
         </activity>
         <activity
             android:name="tn.startupfactory.tunifund.AddProjectActivity"
@@ -38,10 +37,16 @@
             android:name="tn.startupfactory.tunifund.interfaceM.DesciptionActivity"
             android:label="@string/title_activity_desciption" >
         </activity>
-        <activity android:name="tn.startupfactory.tunifund.test.PageGaucheFragment" android:screenOrientation="portrait" />
-        <activity android:name="tn.startupfactory.tunifund.test.PageMilieuFragment" android:screenOrientation="portrait" />
-        <activity android:name="tn.startupfactory.tunifund.test.PageDroiteFragment" android:screenOrientation="portrait" />
-		<activity
+        <activity
+            android:name="tn.startupfactory.tunifund.test.PageGaucheFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="tn.startupfactory.tunifund.test.PageMilieuFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="tn.startupfactory.tunifund.test.PageDroiteFragment"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="tn.startupfactory.tunifund.interfaceM.DonateActivity"
             android:label="@string/title_activity_donate" >
         </activity>
@@ -49,9 +54,10 @@
             android:name="tn.startupfactory.tunifund.interfaceM.PdfActivity"
             android:label="@string/title_activity_pdf" >
         </activity>
+       
         <activity
-            android:name="tn.startupfactory.tunifund.splashscreen.SpalshScreenActivity"
-            android:label="@string/title_activity_spalsh_screen" >
+            android:name="tn.startupfactory.tunifund.SplashScreenActivity"
+            android:label="@string/title_activity_splash_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

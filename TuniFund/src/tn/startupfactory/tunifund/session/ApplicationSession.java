@@ -2,9 +2,14 @@ package tn.startupfactory.tunifund.session;
 
 import android.app.Application;
 
+
 public class ApplicationSession extends Application{
 	
-	Session session = new Session();
+	public static Session session;
+	public ApplicationSession(){
+		super();
+		session = new Session();
+	}
 
     public String getId() {
         return session.id;
