@@ -3,6 +3,9 @@ package tn.startupfactory.tunifund.interfaceM;
 import java.io.File;
 import com.example.mupdf.PDFHandler;
 import tn.startupfactory.tunifund.R;
+import tn.startupfactory.tunifund.servicemock.ProjectMock;
+import tn.startupfactory.tunifund.servicemock.UserMock;
+import tn.startupfactoy.tunifund.domain.Project;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -17,14 +20,23 @@ import android.widget.Toast;
 
 public class PdfActivity extends Activity {
 
+	ProjectMock projectMock;
+	UserMock userMock;
+	Project project;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		projectMock = ProjectMock.getInstance();
+		userMock = UserMock.getInstance();
+		project = projectMock.getById(1);
+		
+		
 		//Creation PDF
-		String titre="Donation to ";
-		String ch1="From : ";
+		String titre="Donation to " + project.getName();
+		String ch1="From : " ;
 		String ch2="CIN : ";
 		String ch3="Donation : ";
 		String ch4="";
