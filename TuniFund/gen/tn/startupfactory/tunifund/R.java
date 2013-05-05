@@ -942,8 +942,9 @@ containing a value of this type.
         public static final int project_science=0x7f020079;
         public static final int project_technology=0x7f02007a;
         public static final int radialback=0x7f02007b;
-        public static final int user=0x7f02007c;
-        public static final int valid=0x7f02007d;
+        public static final int splash=0x7f02007c;
+        public static final int user=0x7f02007d;
+        public static final int valid=0x7f02007e;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f050022;

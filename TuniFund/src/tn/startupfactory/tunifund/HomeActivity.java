@@ -47,8 +47,9 @@ public class HomeActivity extends SherlockFragmentActivity {
 		
 		ViewPager pager = (ViewPager) super.findViewById(R.id.viewpager);
 		pager.setAdapter(this.mPagerAdapter);
-		pager.setOffscreenPageLimit(2);
+		pager.setOffscreenPageLimit(4);
 		pager.setCurrentItem(3);
+		
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {	
