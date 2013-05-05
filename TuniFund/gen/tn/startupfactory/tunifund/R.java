@@ -931,20 +931,21 @@ containing a value of this type.
         public static final int abs__textfield_searchview_right_holo_light=0x7f02006e;
         public static final int annuler=0x7f02006f;
         public static final int background=0x7f020070;
-        public static final int ic_action_search=0x7f020071;
-        public static final int ic_launcher=0x7f020072;
-        public static final int icon=0x7f020073;
-        public static final int inscri=0x7f020074;
-        public static final int login=0x7f020075;
-        public static final int logo=0x7f020076;
-        public static final int project_art=0x7f020077;
-        public static final int project_default=0x7f020078;
-        public static final int project_science=0x7f020079;
-        public static final int project_technology=0x7f02007a;
-        public static final int radialback=0x7f02007b;
-        public static final int splash=0x7f02007c;
-        public static final int user=0x7f02007d;
-        public static final int valid=0x7f02007e;
+        public static final int border_layout=0x7f020071;
+        public static final int ic_action_search=0x7f020072;
+        public static final int ic_launcher=0x7f020073;
+        public static final int icon=0x7f020074;
+        public static final int inscri=0x7f020075;
+        public static final int login=0x7f020076;
+        public static final int logo=0x7f020077;
+        public static final int project_art=0x7f020078;
+        public static final int project_default=0x7f020079;
+        public static final int project_science=0x7f02007a;
+        public static final int project_technology=0x7f02007b;
+        public static final int radialback=0x7f02007c;
+        public static final int splash=0x7f02007d;
+        public static final int user=0x7f02007e;
+        public static final int valid=0x7f02007f;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f050022;
@@ -1010,7 +1011,7 @@ containing a value of this type.
         public static final int lin_lay=0x7f050041;
         public static final int listMode=0x7f050002;
         public static final int logo=0x7f050042;
-        public static final int menu_settings=0x7f05005c;
+        public static final int menu_settings=0x7f05005d;
         public static final int name=0x7f050051;
         public static final int nom=0x7f050057;
         public static final int normal=0x7f050001;
@@ -1031,6 +1032,7 @@ containing a value of this type.
         public static final int showCustom=0x7f050008;
         public static final int showHome=0x7f050005;
         public static final int showTitle=0x7f050007;
+        public static final int sign_in=0x7f05005c;
         public static final int tabMode=0x7f050003;
         public static final int telephone=0x7f050054;
         public static final int textView1=0x7f050058;
@@ -1151,16 +1153,17 @@ containing a value of this type.
         public static final int app_name=0x7f0a000f;
         public static final int hello_world=0x7f0a0010;
         public static final int menu_settings=0x7f0a0011;
-        public static final int title_activity_add_project=0x7f0a0014;
-        public static final int title_activity_authentification=0x7f0a0016;
-        public static final int title_activity_desciption=0x7f0a0017;
-        public static final int title_activity_donate=0x7f0a0019;
+        public static final int sign_in=0x7f0a0014;
+        public static final int title_activity_add_project=0x7f0a0015;
+        public static final int title_activity_authentification=0x7f0a0017;
+        public static final int title_activity_desciption=0x7f0a0018;
+        public static final int title_activity_donate=0x7f0a001a;
         public static final int title_activity_home=0x7f0a0012;
-        public static final int title_activity_inscription=0x7f0a0015;
-        public static final int title_activity_pdf=0x7f0a001a;
-        public static final int title_activity_spalsh_screen=0x7f0a001b;
-        public static final int title_activity_splash_screen=0x7f0a001c;
-        public static final int title_project=0x7f0a0018;
+        public static final int title_activity_inscription=0x7f0a0016;
+        public static final int title_activity_pdf=0x7f0a001b;
+        public static final int title_activity_spalsh_screen=0x7f0a001c;
+        public static final int title_activity_splash_screen=0x7f0a001d;
+        public static final int title_project=0x7f0a0019;
     }
     public static final class style {
         /** 

@@ -5,6 +5,10 @@ import java.io.File;
 import com.example.mupdf.PDFHandler;
 
 import tn.startupfactory.tunifund.R;
+import tn.startupfactory.tunifund.servicemock.ProjectMock;
+import tn.startupfactory.tunifund.servicemock.UserMock;
+import tn.startupfactoy.tunifund.domain.Project;
+import tn.startupfactoy.tunifund.domain.User;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,10 +23,16 @@ import android.widget.Toast;
 
 public class PdfActivity extends Activity {
 
+	ProjectMock projectMock;
+	UserMock userMock;
+	Project project;
+	User user;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_pdf);
+		
 		
 		//Creation PDF
 		String titre="Donation to ";
@@ -36,6 +46,7 @@ public class PdfActivity extends Activity {
 				 ch3 //Max ligne
 				,ch4};
 		
+		//Bitmap courbe = BitmapFactory.decodeResource(getResources(), Util.GetIDimgByName(getApplicationContext(), "v"+offre.getId()+"m" ));	
 		Bitmap courbe = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
 		Bitmap logo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
 		String nameFile="pdfm";
@@ -70,8 +81,7 @@ public class PdfActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.pdf, menu);
+		//getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
 }

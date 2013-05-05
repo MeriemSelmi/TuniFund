@@ -40,6 +40,7 @@ public class HomeActivity extends SherlockFragmentActivity {
 		fragments.add(Fragment.instantiate(this,NewFragment.class.getName()));
 		fragments.add(Fragment.instantiate(this, PopularFragment.class.getName()));
 		fragments.add(Fragment.instantiate(this,AllFragment.class.getName()));
+		
 
 	
 		this.mPagerAdapter = new MyPagerAdapter(super.getSupportFragmentManager(), fragments);
@@ -50,25 +51,25 @@ public class HomeActivity extends SherlockFragmentActivity {
 		pager.setOffscreenPageLimit(4);
 		pager.setCurrentItem(3);
 		
+		
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {	
-		/*String userid = appSession.getId();
+		String userid = appSession.getId();
 		if (userid.equals("")) {
 			getSupportMenuInflater().inflate(R.menu.action_bar_disconnected, menu);
 			return true;
 		}
 		else{
-			getSupportMenuInflater().inflate(R.menu.action_bar_connected, menu);*/
+			getSupportMenuInflater().inflate(R.menu.action_bar_connected, menu);
 			return true;
-		//}
+		}
 	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch (item.getItemId()) {
-		case R.id.action_settings:
-			
+		case R.id.sign_in:		
 			Toast.makeText(HomeActivity.this, "", Toast.LENGTH_SHORT).show();
 			return true;
 

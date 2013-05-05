@@ -19,9 +19,9 @@ public class ProjectMock implements ProjectService {
 	private ProjectMock() {
 		userMock = UserMock.getInstance();
 		projects = new ArrayList<Project>();
-		projects.add(new Project("Projet1", "Blablabladescription", 300.000, 300, Theme.SCIENCE, userMock.getById(1), "Qayrawen"));
-		projects.add(new Project("Projet2", "Blablabladescription2", 300.000, 300, Theme.TECHNOLOGY, userMock.getById(1), "Gabes"));
-		projects.add(new Project("Projet3", "Blablabladescription3", 300.000, 300, Theme.ART, userMock.getById(2), "Tataouine"));
+		projects.add(new Project("Lithoprim", "This unit can produce prototype castings, parts metal or plastic items. The method used is the stereo lithography photocuring. The products are manufactured at the request of companies before start of production on an industrial scale.", 2057.000, 300, Theme.SCIENCE, userMock.getById(1), "Qayrawen"));
+		projects.add(new Project("PhosphatFactory", "Manufacturing unit of mono and bi-calcium phosphate for medical and veterinary use and to agricultural use (feeding poultry and livestock)",2312.000, 300, Theme.TECHNOLOGY, userMock.getById(1), "Gabes"));
+		projects.add(new Project("Awled Tounes Album", "The album includes children from different conservatories from southern Tunisia. Funds raised will be used for charitatives works.", 200.000, 300, Theme.ART, userMock.getById(2), "Tataouine"));
 	}
 
 	@Override
