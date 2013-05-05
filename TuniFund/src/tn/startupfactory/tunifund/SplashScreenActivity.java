@@ -30,7 +30,7 @@ public class SplashScreenActivity extends Activity {
     	super.onCreate(savedInstanceState);
     	setContentView(R.layout.activity_spalsh_screen);
     	CountDown _tik;
-    	_tik=new CountDown(2000,2000,this,HomeActivity.class);// It delay the screen for 1 second and after that switch to YourNextActivity
+    	_tik=new CountDown(1000,1000,this,HomeActivity.class);// It delay the screen for 1 second and after that switch to YourNextActivity
     	_tik.start();
     	StartAnimations();
     }

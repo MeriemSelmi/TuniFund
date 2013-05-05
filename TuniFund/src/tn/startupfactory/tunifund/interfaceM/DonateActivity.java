@@ -3,10 +3,14 @@ package tn.startupfactory.tunifund.interfaceM;
 import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.R.layout;
 import tn.startupfactory.tunifund.R.menu;
+<<<<<<< HEAD
 import tn.startupfactory.tunifund.servicemock.ProjectMock;
 import tn.startupfactory.tunifund.servicemock.UserMock;
 import tn.startupfactoy.tunifund.domain.Project;
 import tn.startupfactoy.tunifund.domain.User;
+=======
+import tn.startupfactory.tunifund.session.ApplicationSession;
+>>>>>>> 693c7b9bd3d3c490ed35ba0dfba1aaa1bb7b7282
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -23,10 +27,14 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 
 	Button donate;
 	RadioGroup radioDonations;
+<<<<<<< HEAD
 	ProjectMock projectMock;
 	int idUser;
 	int idProject;
 	double donation;
+=======
+	EditText amountText;
+>>>>>>> 693c7b9bd3d3c490ed35ba0dfba1aaa1bb7b7282
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,7 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 
 		donate = (Button) findViewById(R.id.donate);
 		donate.setOnClickListener(this);
+		amountText = (EditText) findViewById(R.id.amount);
 		
 		idProject = getIntent().getExtras().getInt("idProject");
 		idUser = getIntent().getExtras().getInt("idUser");
@@ -55,6 +64,7 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 		int idSelected = radioDonations.getCheckedRadioButtonId();
 		RadioButton radioButton = (RadioButton) radioDonations.findViewById(idSelected);
 		String selected = (String) radioButton.getText();
+<<<<<<< HEAD
 		Log.d("aaaaaaaaaaaaaaaaaaaaaaaa" , selected);
 		try{
 			donation = Double.parseDouble(((EditText) findViewById(R.id.donation)).getText().toString());
@@ -70,6 +80,14 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 		}catch(Exception e){
 			Toast.makeText(getApplicationContext(), "Please enter a numeric value", Toast.LENGTH_LONG);
 		}
+=======
+		String amount = amountText.getText().toString(); 
+
+		Intent intent=new Intent(DonateActivity.this,PdfActivity.class);		
+		intent.putExtra("choice",selected);
+		intent.putExtra("amount",amount);
+		startActivity(intent);
+>>>>>>> 693c7b9bd3d3c490ed35ba0dfba1aaa1bb7b7282
 		
 	}
 
