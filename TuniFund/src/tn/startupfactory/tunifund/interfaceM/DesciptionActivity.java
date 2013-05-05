@@ -19,7 +19,7 @@ import com.actionbarsherlock.view.MenuItem;
 public class DesciptionActivity extends SherlockActivity implements
 		View.OnClickListener {
 
-	TextView proj, category, funded, pledged, to_go, required, text_descrip;
+	TextView proj, category, funded, pledged, to_go, required, text_descrip, profit;
 	ImageView project_image;
 	ProjectService projectMock;
 	Project project;
@@ -38,8 +38,10 @@ public class DesciptionActivity extends SherlockActivity implements
 		to_go = (TextView) findViewById(R.id.to_go);
 		required = (TextView) findViewById(R.id.required);
 		text_descrip = (TextView) findViewById(R.id.text_descrip);
+		profit = (TextView) findViewById(R.id.profit);
 		project_image = (ImageView) findViewById(R.id.image);
 		donate = (Button) findViewById(R.id.donate);
+		
 
 		projectMock = ProjectMock.getInstance();
 		
@@ -54,6 +56,7 @@ public class DesciptionActivity extends SherlockActivity implements
 		required.append(project.getRequired() + "");
 		text_descrip.setText(project.getDescription() + "");
 		project_image.setImageResource(project.getImage());
+		profit.append(project.getTunifundProfit()+"");
 		donate.setOnClickListener(this);
 
 	}

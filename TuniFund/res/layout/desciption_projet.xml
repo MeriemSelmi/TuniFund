@@ -2,7 +2,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="10dp"
-    android:orientation="vertical" 
+    android:orientation="vertical"
+    android:background="@drawable/background" 
     >
 
     <LinearLayout
@@ -14,7 +15,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:text="Project :  " />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Project : " />
     </LinearLayout>
 
     <LinearLayout
@@ -27,7 +29,8 @@
             android:layout_width="152dp"
             android:layout_height="152dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/project_technology" />
+            android:src="@drawable/project_technology"
+             />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -59,20 +62,20 @@
                 android:text="Pledged $ :  " />
 
             <TextView
+                android:id="@+id/required"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:text="Required $ :  "
+                android:textSize="20dp" />
+
+            <TextView
                 android:id="@+id/to_go"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="7dp"
                 android:textSize="20dp"
-                android:text="To_Go $ :  " />
-
-            <TextView
-                android:id="@+id/required"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_marginBottom="7dp"
-                android:text="Required $ :  " />
+                android:text="Days To Go :  " />
         </LinearLayout>
     </LinearLayout>
    
@@ -94,6 +97,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Texte_Descrip" />
+
+        <TextView
+            android:id="@+id/profit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profits to Tuni Funding $ : "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
     </LinearLayout>
     
