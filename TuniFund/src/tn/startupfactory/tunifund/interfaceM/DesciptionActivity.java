@@ -14,12 +14,14 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DesciptionActivity extends Activity implements
 		View.OnClickListener {
 
 	TextView proj, category, funded, pledged, to_go, required, text_descrip;
+	ImageView project_image;
 	ProjectService projectMock;
 	Project project;
 	Button donate;
@@ -36,10 +38,13 @@ public class DesciptionActivity extends Activity implements
 		to_go = (TextView) findViewById(R.id.to_go);
 		required = (TextView) findViewById(R.id.required);
 		text_descrip = (TextView) findViewById(R.id.text_descrip);
+		project_image = (ImageView) findViewById(R.id.image);
 		donate = (Button) findViewById(R.id.donate);
 
 		projectMock = ProjectMock.getInstance();
-		project = projectMock.getById(1);
+		
+		int id = getIntent().getExtras().getInt("idProject");
+		project = projectMock.getById(id);
 
 		proj.append(project.getName());
 		category.append(project.getTheme());
@@ -48,7 +53,7 @@ public class DesciptionActivity extends Activity implements
 		to_go.append(project.getDaysToGo() + "");
 		required.append(project.getRequired() + "");
 		text_descrip.setText(project.getDescription() + "");
-
+		project_image.setImageResource(project.getImage());
 		donate.setOnClickListener(this);
 
 	}
