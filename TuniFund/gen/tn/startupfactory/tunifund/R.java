@@ -31,16 +31,18 @@ public final class R {
         public static final int ic_launcher=0x7f020003;
         public static final int icon=0x7f020004;
         public static final int inscri=0x7f020005;
-        public static final int logo=0x7f020006;
-        public static final int project_art=0x7f020007;
-        public static final int project_default=0x7f020008;
-        public static final int project_science=0x7f020009;
-        public static final int project_technology=0x7f02000a;
-        public static final int radialback=0x7f02000b;
-        public static final int valid=0x7f02000c;
+        public static final int login=0x7f020006;
+        public static final int logo=0x7f020007;
+        public static final int project_art=0x7f020008;
+        public static final int project_default=0x7f020009;
+        public static final int project_science=0x7f02000a;
+        public static final int project_technology=0x7f02000b;
+        public static final int radialback=0x7f02000c;
+        public static final int user=0x7f02000d;
+        public static final int valid=0x7f02000e;
     }
     public static final class id {
-        public static final int action_settings=0x7f090025;
+        public static final int action_settings=0x7f090024;
         public static final int addProject=0x7f090006;
         public static final int address=0x7f09001e;
         public static final int annuler=0x7f09001f;
@@ -58,7 +60,7 @@ public final class R {
         public static final int lastname=0x7f09001b;
         public static final int lin_lay=0x7f09000a;
         public static final int logo=0x7f09000b;
-        public static final int menu_settings=0x7f090024;
+        public static final int menu_settings=0x7f090025;
         public static final int name=0x7f09001a;
         public static final int nom=0x7f090020;
         public static final int pass=0x7f09000d;
@@ -86,27 +88,30 @@ public final class R {
         public static final int activity_main=0x7f030003;
         public static final int activity_pdf=0x7f030004;
         public static final int activity_spalsh_screen=0x7f030005;
-        public static final int authentification=0x7f030006;
-        public static final int desciption_projet=0x7f030007;
-        public static final int fragment_layout=0x7f030008;
-        public static final int inscription=0x7f030009;
-        public static final int item_project=0x7f03000a;
-        public static final int page_droite_layout=0x7f03000b;
-        public static final int page_gauche_layout=0x7f03000c;
-        public static final int page_milieu_layout=0x7f03000d;
-        public static final int projects_layout=0x7f03000e;
-        public static final int viewpager=0x7f03000f;
+        public static final int activity_splash_screen=0x7f030006;
+        public static final int authentification=0x7f030007;
+        public static final int desciption_projet=0x7f030008;
+        public static final int fragment_layout=0x7f030009;
+        public static final int inscription=0x7f03000a;
+        public static final int item_project=0x7f03000b;
+        public static final int page_droite_layout=0x7f03000c;
+        public static final int page_gauche_layout=0x7f03000d;
+        public static final int page_milieu_layout=0x7f03000e;
+        public static final int projects_layout=0x7f03000f;
+        public static final int viewpager=0x7f030010;
     }
     public static final class menu {
-        public static final int activity_main=0x7f080000;
-        public static final int add_project=0x7f080001;
-        public static final int authentification=0x7f080002;
-        public static final int desciption=0x7f080003;
-        public static final int donate=0x7f080004;
-        public static final int home=0x7f080005;
-        public static final int inscription=0x7f080006;
-        public static final int pdf=0x7f080007;
-        public static final int spalsh_screen=0x7f080008;
+        public static final int action_bar_connected=0x7f080000;
+        public static final int action_bar_disconnected=0x7f080001;
+        public static final int activity_main=0x7f080002;
+        public static final int add_project=0x7f080003;
+        public static final int authentification=0x7f080004;
+        public static final int desciption=0x7f080005;
+        public static final int donate=0x7f080006;
+        public static final int inscription=0x7f080007;
+        public static final int pdf=0x7f080008;
+        public static final int spalsh_screen=0x7f080009;
+        public static final int splash_screen=0x7f08000a;
     }
     public static final class string {
         public static final int action_settings=0x7f060004;
@@ -121,6 +126,7 @@ public final class R {
         public static final int title_activity_inscription=0x7f060006;
         public static final int title_activity_pdf=0x7f06000b;
         public static final int title_activity_spalsh_screen=0x7f06000c;
+        public static final int title_activity_splash_screen=0x7f06000d;
         public static final int title_project=0x7f060009;
     }
     public static final class style {
