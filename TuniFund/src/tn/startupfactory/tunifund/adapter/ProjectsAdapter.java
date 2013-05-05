@@ -13,6 +13,7 @@ import tn.startupfactoy.tunifund.domain.Project;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -73,7 +74,10 @@ public class ProjectsAdapter extends BaseAdapter{
 					mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 					if(ApplicationSession.getId()!=""){
 						mIntent.putExtra("idUser", Integer.parseInt(ApplicationSession.getId()));}
-					mIntent.putExtra("idProject", 1);
+					
+					Log.d("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa POS", String.valueOf(pos));
+					Log.d("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ID", String.valueOf(titres.get(pos).getId()));
+					mIntent.putExtra("idProject", titres.get(pos).getId());
 					
 					HomeActivity.HomeContext.startActivity(mIntent);
 				}

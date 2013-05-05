@@ -1,80 +1,59 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
-    <LinearLayout
-        
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout   
+     	xmlns:android="http://schemas.android.com/apk/res/android"    
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="100dp"
-            android:text=" 1$+ : " />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="100dp"
+        android:layout_marginBottom="40dp" 
+        android:orientation="vertical">
+     <RadioGroup
+        android:id="@+id/radioDonations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+	
+	     <RadioButton
+	         android:id="@+id/radioButton1"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="1 DT +" />
+	      <TextView
+            android:layout_width="162dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="50dp"
             android:text=" No Rewards " />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:layout_marginBottom="40dp">
-
-        <TextView
+	
+	     <RadioButton
+	         android:id="@+id/radioButton2"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="100 DT +" />
+	     
+	     <TextView
+	         android:layout_width="197dp"
+	         android:layout_height="66dp"
+	         android:layout_marginLeft="50dp"
+	         android:text=" thank you for your  help you&apos;ll benefit in return for a free service for this project " />
+	
+	     <RadioButton
+	         android:id="@+id/radioButton3"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="1000 DT +" />
+	      <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="100dp"
-            android:text=" 100$+ : " />
-
-        <TextView
-            android:layout_width="134dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="100dp"
-            android:text=" thank you for your help you'll benefit in return for a free service for this project " />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="100dp"
-            android:text=" 1000$+ : " />
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" we are honored to have you as a shareholder in this project, you are wellcome " />
-            
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-        
-        <EditText
+            android:layout_marginLeft="50dp"
+            android:text=" we are honored to have you as a shareholder in this project, you are welcome " />
+	   </RadioGroup>
+	   <EditText
             android:id="@+id/price"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.27" />
-
-        <Button
+	   <Button
             android:id="@+id/donate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Donate" />
-        
-	</LinearLayout>
+	   
 </LinearLayout>
