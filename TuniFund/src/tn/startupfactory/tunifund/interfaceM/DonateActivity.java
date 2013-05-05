@@ -25,7 +25,8 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 		donate.setOnClickListener(this);
 		
 		radioDonations = (RadioGroup) findViewById(R.id.radioDonations);
-		
+		int idSelected = radioDonations.getCheckedRadioButtonId();
+		View radioButton = radioDonations.findViewById(idSelected);
 
 	}
 
