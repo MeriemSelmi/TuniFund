@@ -38,17 +38,7 @@
         <activity
             android:name="tn.startupfactory.tunifund.HomeActivity"
             android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="tn.startupfactory.tunifund.test.PageGaucheFragment"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="tn.startupfactory.tunifund.test.PageMilieuFragment"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="tn.startupfactory.tunifund.test.PageDroiteFragment"
-            android:screenOrientation="portrait" />
-        
+        </activity>      
        
         <activity
             android:name="tn.startupfactory.tunifund.interfaceM.DonateActivity"

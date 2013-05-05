@@ -66,13 +66,7 @@ public class ProjectsAdapter extends BaseAdapter {
 					Intent mIntent = new Intent(HomeActivity.HomeContext,
 							DesciptionActivity.class);
 					mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-					if (ApplicationSession.getId() != "") {
-						mIntent.putExtra("idUser",
-								Integer.parseInt(ApplicationSession.getId()));
-					}
-
 					mIntent.putExtra("idProject", titres.get(pos).getId());
-
 					HomeActivity.HomeContext.startActivity(mIntent);
 				}
 			};
