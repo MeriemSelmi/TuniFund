@@ -247,7 +247,7 @@ int drawable abs__textfield_searchview_holo_light 0x7f02006c
 int drawable abs__textfield_searchview_right_holo_dark 0x7f02006d
 int drawable abs__textfield_searchview_right_holo_light 0x7f02006e
 int drawable annuler 0x7f02006f
-int drawable backgound 0x7f020070
+int drawable background 0x7f020070
 int drawable ic_action_search 0x7f020071
 int drawable ic_launcher 0x7f020072
 int drawable icon 0x7f020073
@@ -304,6 +304,7 @@ int id abs__up 0x7f05000b
 int id action_settings 0x7f05005b
 int id addProject 0x7f050039
 int id address 0x7f050055
+int id amount 0x7f05003f
 int id annuler 0x7f050056
 int id btnNewFragment 0x7f050059
 int id cancelProject 0x7f05003a
@@ -329,7 +330,6 @@ int id nom 0x7f050057
 int id normal 0x7f050001
 int id pass 0x7f050044
 int id pledged 0x7f05004b
-int id price 0x7f05003f
 int id projectAmount 0x7f050035
 int id projectCountry 0x7f050036
 int id projectDaysToGo 0x7f050037

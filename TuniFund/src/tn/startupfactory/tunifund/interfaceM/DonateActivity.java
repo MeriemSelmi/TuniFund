@@ -3,6 +3,7 @@ package tn.startupfactory.tunifund.interfaceM;
 import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.R.layout;
 import tn.startupfactory.tunifund.R.menu;
+import tn.startupfactory.tunifund.session.ApplicationSession;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -17,6 +19,7 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 
 	Button donate;
 	RadioGroup radioDonations;
+	EditText amountText;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 
 		donate = (Button) findViewById(R.id.donate);
 		donate.setOnClickListener(this);
+		amountText = (EditText) findViewById(R.id.amount);
 		
 		
 	}
@@ -43,9 +47,11 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 		int idSelected = radioDonations.getCheckedRadioButtonId();
 		RadioButton radioButton = (RadioButton) radioDonations.findViewById(idSelected);
 		String selected = (String) radioButton.getText();
-		Log.d("aaaaaaaaaaaaaaaaaaaaaaaa" , selected);
+		String amount = amountText.getText().toString(); 
 
-		Intent intent=new Intent(DonateActivity.this,PdfActivity.class);
+		Intent intent=new Intent(DonateActivity.this,PdfActivity.class);		
+		intent.putExtra("choice",selected);
+		intent.putExtra("amount",amount);
 		startActivity(intent);
 		
 	}

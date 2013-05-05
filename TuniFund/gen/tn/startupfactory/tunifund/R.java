@@ -930,7 +930,7 @@ containing a value of this type.
         public static final int abs__textfield_searchview_right_holo_dark=0x7f02006d;
         public static final int abs__textfield_searchview_right_holo_light=0x7f02006e;
         public static final int annuler=0x7f02006f;
-        public static final int backgound=0x7f020070;
+        public static final int background=0x7f020070;
         public static final int ic_action_search=0x7f020071;
         public static final int ic_launcher=0x7f020072;
         public static final int icon=0x7f020073;
@@ -989,6 +989,7 @@ containing a value of this type.
         public static final int action_settings=0x7f05005b;
         public static final int addProject=0x7f050039;
         public static final int address=0x7f050055;
+        public static final int amount=0x7f05003f;
         public static final int annuler=0x7f050056;
         public static final int btnNewFragment=0x7f050059;
         public static final int cancelProject=0x7f05003a;
@@ -1014,7 +1015,6 @@ containing a value of this type.
         public static final int normal=0x7f050001;
         public static final int pass=0x7f050044;
         public static final int pledged=0x7f05004b;
-        public static final int price=0x7f05003f;
         public static final int projectAmount=0x7f050035;
         public static final int projectCountry=0x7f050036;
         public static final int projectDaysToGo=0x7f050037;
