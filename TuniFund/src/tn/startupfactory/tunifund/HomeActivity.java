@@ -31,7 +31,7 @@ public class HomeActivity extends SherlockFragmentActivity {
 		super.onCreate(savedInstanceState);
 		super.setContentView(R.layout.viewpager);
 		
-
+		appSession = new ApplicationSession();
 		List<Fragment> fragments = new Vector<Fragment>();
 
 		fragments.add(Fragment.instantiate(this,NewFragment.class.getName()));
@@ -49,7 +49,7 @@ public class HomeActivity extends SherlockFragmentActivity {
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		appSession = (ApplicationSession) getApplication();
+		appSession = (ApplicationSession)getApplication();
 		String userid = appSession.getId();
 		if (userid.equals("")) {
 			getSupportMenuInflater().inflate(R.menu.action_bar_disconnected, menu);

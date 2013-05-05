@@ -934,14 +934,15 @@ containing a value of this type.
         public static final int ic_action_search=0x7f020071;
         public static final int ic_launcher=0x7f020072;
         public static final int inscri=0x7f020073;
-        public static final int logo=0x7f020074;
-        public static final int project_art=0x7f020075;
-        public static final int project_default=0x7f020076;
-        public static final int project_science=0x7f020077;
-        public static final int project_technology=0x7f020078;
-        public static final int radialback=0x7f020079;
-        public static final int user=0x7f02007a;
-        public static final int valid=0x7f02007b;
+        public static final int login=0x7f020074;
+        public static final int logo=0x7f020075;
+        public static final int project_art=0x7f020076;
+        public static final int project_default=0x7f020077;
+        public static final int project_science=0x7f020078;
+        public static final int project_technology=0x7f020079;
+        public static final int radialback=0x7f02007a;
+        public static final int user=0x7f02007b;
+        public static final int valid=0x7f02007c;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f050022;
@@ -1068,18 +1069,19 @@ containing a value of this type.
         public static final int activity_main=0x7f03001a;
         public static final int activity_pdf=0x7f03001b;
         public static final int activity_spalsh_screen=0x7f03001c;
-        public static final int authentification=0x7f03001d;
-        public static final int desciption_projet=0x7f03001e;
-        public static final int fragment_layout=0x7f03001f;
-        public static final int inscription=0x7f030020;
-        public static final int item_project=0x7f030021;
-        public static final int page_droite_layout=0x7f030022;
-        public static final int page_gauche_layout=0x7f030023;
-        public static final int page_milieu_layout=0x7f030024;
-        public static final int projects_layout=0x7f030025;
-        public static final int sherlock_spinner_dropdown_item=0x7f030026;
-        public static final int sherlock_spinner_item=0x7f030027;
-        public static final int viewpager=0x7f030028;
+        public static final int activity_splash_screen=0x7f03001d;
+        public static final int authentification=0x7f03001e;
+        public static final int desciption_projet=0x7f03001f;
+        public static final int fragment_layout=0x7f030020;
+        public static final int inscription=0x7f030021;
+        public static final int item_project=0x7f030022;
+        public static final int page_droite_layout=0x7f030023;
+        public static final int page_gauche_layout=0x7f030024;
+        public static final int page_milieu_layout=0x7f030025;
+        public static final int projects_layout=0x7f030026;
+        public static final int sherlock_spinner_dropdown_item=0x7f030027;
+        public static final int sherlock_spinner_item=0x7f030028;
+        public static final int viewpager=0x7f030029;
     }
     public static final class menu {
         public static final int action_bar_connected=0x7f0c0000;
@@ -1092,6 +1094,7 @@ containing a value of this type.
         public static final int inscription=0x7f0c0007;
         public static final int pdf=0x7f0c0008;
         public static final int spalsh_screen=0x7f0c0009;
+        public static final int splash_screen=0x7f0c000a;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1151,6 +1154,7 @@ containing a value of this type.
         public static final int title_activity_inscription=0x7f0a0015;
         public static final int title_activity_pdf=0x7f0a001a;
         public static final int title_activity_spalsh_screen=0x7f0a001b;
+        public static final int title_activity_splash_screen=0x7f0a001c;
         public static final int title_project=0x7f0a0018;
     }
     public static final class style {

@@ -14,5 +14,6 @@
     <string name="title_activity_donate">DonateActivity</string>
     <string name="title_activity_pdf">PdfActivity</string>
     <string name="title_activity_spalsh_screen">SpalshScreenActivity</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
 
 </resources>
