@@ -1,24 +1,24 @@
 package tn.startupfactory.tunifund.interfaceM;
 
+import tn.startupfactory.tunifund.HomeActivity;
 import tn.startupfactory.tunifund.R;
-import tn.startupfactory.tunifund.R.layout;
-import tn.startupfactory.tunifund.R.menu;
 import tn.startupfactory.tunifund.service.ProjectService;
-import tn.startupfactory.tunifund.service.UserService;
 import tn.startupfactory.tunifund.servicemock.ProjectMock;
-import tn.startupfactory.tunifund.servicemock.UserMock;
 import tn.startupfactory.tunifund.session.ApplicationSession;
 import tn.startupfactoy.tunifund.domain.Project;
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class DesciptionActivity extends Activity implements
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+
+public class DesciptionActivity extends SherlockActivity implements
 		View.OnClickListener {
 
 	TextView proj, category, funded, pledged, to_go, required, text_descrip;
@@ -29,6 +29,7 @@ public class DesciptionActivity extends Activity implements
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		setTheme(R.style.Theme_Sherlock_Light);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.desciption_projet);
 
@@ -68,6 +69,32 @@ public class DesciptionActivity extends Activity implements
 		}
 		intent.putExtra("idProject", project.getId());
 		startActivity(intent);
+		
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {	
+		String userid = appSession.getId();
+		if (userid.equals("")) {
+			getSupportMenuInflater().inflate(R.menu.action_bar_disconnected, menu);
+			return true;
+		}
+		else{
+			getSupportMenuInflater().inflate(R.menu.action_bar_connected, menu);
+			return true;
+		}
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch (item.getItemId()) {
+		case R.id.sign_in:		
+			Toast.makeText(DesciptionActivity.this, "", Toast.LENGTH_SHORT).show();
+			return true;
+
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 		
 	}
 
