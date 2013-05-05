@@ -4,7 +4,8 @@ package tn.startupfactory.tunifund.session;
 
 public class ApplicationSession {
 	private static ApplicationSession appSess;
-	private int id;
+	public static int id;
+	
 	private ApplicationSession(){
 		id = -1;
 	}

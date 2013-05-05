@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -58,7 +59,7 @@ public class HomeActivity extends SherlockFragmentActivity {
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {	
-		int userid = appSession.getSession();
+		int userid = ApplicationSession.id;
 		if (userid <0) {
 			getSupportMenuInflater().inflate(R.menu.action_bar_disconnected, menu);
 			return true;

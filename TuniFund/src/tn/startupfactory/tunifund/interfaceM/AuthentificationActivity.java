@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import android.util.Log;
 import android.view.View;
 
 public class AuthentificationActivity extends SherlockActivity implements
@@ -44,22 +45,24 @@ public class AuthentificationActivity extends SherlockActivity implements
 
 		UserService userBdd = UserMock.getInstance();
 		if (v == valider) {
-			User user = userBdd.login(cin.getText().toString(), pass.getText()
-					.toString());
-
-			if (cin.equals("") || pass.equals("")) {
+			if ("".equals(cin) || "".equals(pass)) {
 				Toast.makeText(AuthentificationActivity.this,
 						"Les champs sont obligatoires", Toast.LENGTH_SHORT)
 						.show();
 				return;
 			}
+			User user = userBdd.login(cin.getText().toString(), pass.getText()
+					.toString());
 			if (user == null) {
 				Toast.makeText(AuthentificationActivity.this,
 						"Your CIN/password is wrong", Toast.LENGTH_LONG)
 						.show();
-			} else {
-
-				ApplicationSession.getInstance().setSession(user.getId());
+			} 
+			
+			
+			else {
+				Log.d("taag", ""+user.getId());
+				ApplicationSession.id=user.getId();
 				Intent intent = new Intent(AuthentificationActivity.this, HomeActivity.class);
 				startActivity(intent);
 				
@@ -71,7 +74,12 @@ public class AuthentificationActivity extends SherlockActivity implements
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {	
-		getSupportMenuInflater().inflate(R.menu.action_bar_disconnected, menu);
+		if(ApplicationSession.getInstance().getSession()<0){
+		getSupportMenuInflater().inflate(R.menu.action_bar_disconnected, menu);}
+		else{
+			getSupportMenuInflater().inflate(R.menu.action_bar_connected, menu);}
+			
+		
 		return true;
 		
 	}
