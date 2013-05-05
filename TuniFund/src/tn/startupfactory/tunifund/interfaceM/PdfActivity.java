@@ -31,24 +31,14 @@ public class PdfActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		projectMock = ProjectMock.getInstance();
-		userMock = UserMock.getInstance();		
-		
-		int idProject = getIntent().getExtras().getInt("idProject");
-		int idUser = getIntent().getExtras().getInt("idUser");
-		double donation = getIntent().getExtras().getInt("donation");
-				
-		project = projectMock.getById(idProject);
-		user = userMock.getById(idUser);
+		setContentView(R.layout.activity_pdf);
 		
 		
 		//Creation PDF
-		String titre="Donation to " + project.getName();
-		String ch1="From : " + user.getName() + " " + user.getLastName();
-		String ch2="CIN : " + user.getCin();
-		String ch3="Donation : " + donation;
+		String titre="Donation to ";
+		String ch1="From : ";
+		String ch2="CIN : ";
+		String ch3="Donation : ";
 		String ch4="";
 		String description[]=
 				{ch1,
@@ -56,6 +46,7 @@ public class PdfActivity extends Activity {
 				 ch3 //Max ligne
 				,ch4};
 		
+		//Bitmap courbe = BitmapFactory.decodeResource(getResources(), Util.GetIDimgByName(getApplicationContext(), "v"+offre.getId()+"m" ));	
 		Bitmap courbe = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
 		Bitmap logo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
 		String nameFile="pdfm";
@@ -90,8 +81,7 @@ public class PdfActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.pdf, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
 }
