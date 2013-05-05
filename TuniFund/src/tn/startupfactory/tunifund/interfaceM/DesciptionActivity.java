@@ -39,7 +39,9 @@ public class DesciptionActivity extends Activity implements
 		donate = (Button) findViewById(R.id.donate);
 
 		projectMock = ProjectMock.getInstance();
-		project = projectMock.getById(1);
+		
+		int id = getIntent().getExtras().getInt("idProject");
+		project = projectMock.getById(id);
 
 		proj.append(project.getName());
 		category.append(project.getTheme());
