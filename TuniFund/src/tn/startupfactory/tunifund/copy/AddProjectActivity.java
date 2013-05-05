@@ -1,5 +1,6 @@
 package tn.startupfactory.tunifund.copy;
 
+import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.interfaceM.InscriptionActivity;
 import tn.startupfactory.tunifund.service.ProjectService;
 import tn.startupfactory.tunifund.servicemock.ProjectMock;

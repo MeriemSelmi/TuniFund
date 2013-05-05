@@ -1,5 +1,6 @@
 package tn.startupfactory.tunifund.copy;
 
+import tn.startupfactory.tunifund.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.SharedPreferences;
