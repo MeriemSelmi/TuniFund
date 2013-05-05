@@ -6,9 +6,11 @@ import tn.startupfactory.tunifund.R.menu;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class DonateActivity extends Activity implements View.OnClickListener {
@@ -24,10 +26,7 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 		donate = (Button) findViewById(R.id.donate);
 		donate.setOnClickListener(this);
 		
-		radioDonations = (RadioGroup) findViewById(R.id.radioDonations);
-		int idSelected = radioDonations.getCheckedRadioButtonId();
-		View radioButton = radioDonations.findViewById(idSelected);
-
+		
 	}
 
 	@Override
@@ -40,6 +39,12 @@ public class DonateActivity extends Activity implements View.OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		radioDonations = (RadioGroup) findViewById(R.id.radioDonations);
+		int idSelected = radioDonations.getCheckedRadioButtonId();
+		RadioButton radioButton = (RadioButton) radioDonations.findViewById(idSelected);
+		String selected = (String) radioButton.getText();
+		Log.d("aaaaaaaaaaaaaaaaaaaaaaaa" , selected);
+
 		Intent intent=new Intent(DonateActivity.this,PdfActivity.class);
 		startActivity(intent);
 		
