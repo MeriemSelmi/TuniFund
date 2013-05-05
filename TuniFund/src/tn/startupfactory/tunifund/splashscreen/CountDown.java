@@ -14,7 +14,7 @@ public class CountDown extends CountDownTimer {
 		_act = act;
 		_cls = cls;
 	}
-	@Override
+	@Override     
 	public void onFinish() {
 		_act.startActivity(new Intent(_act, _cls));
 		_act.finish();
