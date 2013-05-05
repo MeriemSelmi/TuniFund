@@ -6,6 +6,7 @@ import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.servicemock.ProjectMock;
 import tn.startupfactory.tunifund.servicemock.UserMock;
 import tn.startupfactoy.tunifund.domain.Project;
+import tn.startupfactoy.tunifund.domain.User;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -23,6 +24,7 @@ public class PdfActivity extends Activity {
 	ProjectMock projectMock;
 	UserMock userMock;
 	Project project;
+	User user;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +32,21 @@ public class PdfActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		projectMock = ProjectMock.getInstance();
-		userMock = UserMock.getInstance();
-		project = projectMock.getById(1);
+		userMock = UserMock.getInstance();		
+		
+		int idProject = getIntent().getExtras().getInt("idProject");
+		int idUser = getIntent().getExtras().getInt("idUser");
+		double donation = getIntent().getExtras().getInt("donation");
+				
+		project = projectMock.getById(idProject);
+		user = userMock.getById(idUser);
 		
 		
 		//Creation PDF
 		String titre="Donation to " + project.getName();
-		String ch1="From : " ;
-		String ch2="CIN : ";
-		String ch3="Donation : ";
+		String ch1="From : " + user.getName() + " " + user.getLastName();
+		String ch2="CIN : " + user.getCin();
+		String ch3="Donation : " + donation;
 		String ch4="";
 		String description[]=
 				{ch1,
