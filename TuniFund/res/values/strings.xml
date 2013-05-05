@@ -13,5 +13,6 @@
     <string name="title_project">Project</string>
     <string name="title_activity_donate">DonateActivity</string>
     <string name="title_activity_pdf">PdfActivity</string>
+    <string name="title_activity_spalsh_screen">SpalshScreenActivity</string>
 
 </resources>
