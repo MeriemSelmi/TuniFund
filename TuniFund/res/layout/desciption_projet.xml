@@ -20,7 +20,7 @@
         android:layout_weight="0.47" >
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/image"
             android:layout_width="152dp"
             android:layout_height="152dp"
             android:src="@drawable/project_technology" />

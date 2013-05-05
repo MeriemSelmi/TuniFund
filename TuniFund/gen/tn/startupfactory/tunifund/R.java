@@ -933,16 +933,17 @@ containing a value of this type.
         public static final int backgound=0x7f020070;
         public static final int ic_action_search=0x7f020071;
         public static final int ic_launcher=0x7f020072;
-        public static final int inscri=0x7f020073;
-        public static final int login=0x7f020074;
-        public static final int logo=0x7f020075;
-        public static final int project_art=0x7f020076;
-        public static final int project_default=0x7f020077;
-        public static final int project_science=0x7f020078;
-        public static final int project_technology=0x7f020079;
-        public static final int radialback=0x7f02007a;
-        public static final int user=0x7f02007b;
-        public static final int valid=0x7f02007c;
+        public static final int icon=0x7f020073;
+        public static final int inscri=0x7f020074;
+        public static final int login=0x7f020075;
+        public static final int logo=0x7f020076;
+        public static final int project_art=0x7f020077;
+        public static final int project_default=0x7f020078;
+        public static final int project_science=0x7f020079;
+        public static final int project_technology=0x7f02007a;
+        public static final int radialback=0x7f02007b;
+        public static final int user=0x7f02007c;
+        public static final int valid=0x7f02007d;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f050022;
@@ -985,11 +986,11 @@ containing a value of this type.
         public static final int abs__title=0x7f05001b;
         public static final int abs__titleDivider=0x7f05001c;
         public static final int abs__up=0x7f05000b;
-        public static final int action_settings=0x7f05005c;
+        public static final int action_settings=0x7f05005b;
         public static final int addProject=0x7f050039;
         public static final int address=0x7f050055;
         public static final int annuler=0x7f050056;
-        public static final int btnNewFragment=0x7f05005a;
+        public static final int btnNewFragment=0x7f050059;
         public static final int cancelProject=0x7f05003a;
         public static final int categorie=0x7f050049;
         public static final int cin=0x7f050043;
@@ -1001,16 +1002,15 @@ containing a value of this type.
         public static final int funded=0x7f05004a;
         public static final int gridview=0x7f050050;
         public static final int homeAsUp=0x7f050006;
-        public static final int image=0x7f050057;
-        public static final int imageView1=0x7f050048;
+        public static final int image=0x7f050048;
         public static final int inscri=0x7f050046;
         public static final int lastname=0x7f050052;
         public static final int lin_lay=0x7f050041;
         public static final int listMode=0x7f050002;
         public static final int logo=0x7f050042;
-        public static final int menu_settings=0x7f05005d;
+        public static final int menu_settings=0x7f05005c;
         public static final int name=0x7f050051;
-        public static final int nom=0x7f050058;
+        public static final int nom=0x7f050057;
         public static final int normal=0x7f050001;
         public static final int pass=0x7f050044;
         public static final int pledged=0x7f05004b;
@@ -1032,12 +1032,12 @@ containing a value of this type.
         public static final int showTitle=0x7f050007;
         public static final int tabMode=0x7f050003;
         public static final int telephone=0x7f050054;
-        public static final int textView1=0x7f050059;
+        public static final int textView1=0x7f050058;
         public static final int text_descrip=0x7f05004f;
         public static final int to_go=0x7f05004c;
         public static final int useLogo=0x7f050004;
         public static final int valid=0x7f050045;
-        public static final int viewpager=0x7f05005b;
+        public static final int viewpager=0x7f05005a;
         public static final int wrap_content=0x7f050000;
     }
     public static final class integer {
