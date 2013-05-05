@@ -345,6 +345,7 @@ int id cin 0x7f090043
 int id description 0x7f09004e
 int id disableHome 0x7f090009
 int id donate 0x7f090040
+int id donation 0x7f09003f
 int id edit_query 0x7f090027
 int id email 0x7f090053
 int id funded 0x7f09004a
@@ -363,7 +364,6 @@ int id normal 0x7f090001
 int id page 0x7f090059
 int id pass 0x7f090044
 int id pledged 0x7f09004b
-int id price 0x7f09003f
 int id projectAmount 0x7f090035
 int id projectCountry 0x7f090036
 int id projectDaysToGo 0x7f090037

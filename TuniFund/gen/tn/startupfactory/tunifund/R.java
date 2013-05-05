@@ -1035,6 +1035,7 @@ containing a value of this type.
         public static final int description=0x7f09004e;
         public static final int disableHome=0x7f090009;
         public static final int donate=0x7f090040;
+        public static final int donation=0x7f09003f;
         public static final int edit_query=0x7f090027;
         public static final int email=0x7f090053;
         public static final int funded=0x7f09004a;
@@ -1053,7 +1054,6 @@ containing a value of this type.
         public static final int page=0x7f090059;
         public static final int pass=0x7f090044;
         public static final int pledged=0x7f09004b;
-        public static final int price=0x7f09003f;
         public static final int projectAmount=0x7f090035;
         public static final int projectCountry=0x7f090036;
         public static final int projectDaysToGo=0x7f090037;

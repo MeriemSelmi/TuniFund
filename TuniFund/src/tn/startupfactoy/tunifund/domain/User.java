@@ -23,7 +23,7 @@ public class User {
 	public User() {
 		super();
 		this.id = ID++;
-		this.account =  1000;
+		this.account =  100000;
 		this.fundedProjects = new ArrayList<Project>();
 		this.donatedProjects = new HashMap<Project, Double>();
 	}

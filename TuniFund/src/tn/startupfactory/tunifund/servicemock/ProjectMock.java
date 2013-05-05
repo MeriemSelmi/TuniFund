@@ -46,6 +46,11 @@ public class ProjectMock implements ProjectService {
 		donator.setAccount(donator.getAccount()- amount);
 		Project project = getById(idProject);
 		project.setFunded(project.getFunded() + amount);
+		if(project.getFunded() > project.getRequired()){
+			double profit = (project.getFunded() - project.getRequired())/100*5;
+			project.setTunifundProfit(profit);
+			project.setFunded(project.getFunded()-profit);
+		}
 		project.getDonators().put(donator, amount);
 		donator.getDonatedProjects().put(project, amount);
 		

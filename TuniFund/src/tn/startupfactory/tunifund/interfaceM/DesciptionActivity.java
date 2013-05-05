@@ -7,6 +7,7 @@ import tn.startupfactory.tunifund.service.ProjectService;
 import tn.startupfactory.tunifund.service.UserService;
 import tn.startupfactory.tunifund.servicemock.ProjectMock;
 import tn.startupfactory.tunifund.servicemock.UserMock;
+import tn.startupfactory.tunifund.session.ApplicationSession;
 import tn.startupfactoy.tunifund.domain.Project;
 import android.os.Bundle;
 import android.app.Activity;
@@ -48,7 +49,7 @@ public class DesciptionActivity extends Activity implements
 
 		proj.append(project.getName());
 		category.append(project.getTheme());
-		funded.append(project.getFunded() + "");
+		funded.append(project.getFundedPercentage() + "");
 		pledged.append(project.getPledged() + "");
 		to_go.append(project.getDaysToGo() + "");
 		required.append(project.getRequired() + "");
@@ -62,6 +63,10 @@ public class DesciptionActivity extends Activity implements
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
 		Intent intent=new Intent(DesciptionActivity.this,DonateActivity.class);
+		if(ApplicationSession.getId()!=""){
+			intent.putExtra("idUser", Integer.parseInt(ApplicationSession.getId()));
+		}
+		intent.putExtra("idProject", project.getId());
 		startActivity(intent);
 		
 	}

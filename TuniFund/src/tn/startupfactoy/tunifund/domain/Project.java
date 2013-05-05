@@ -22,6 +22,7 @@ public class Project {
 	private int daysToGo;
 	private String theme;
 	private int image;
+	private double tunifundProfit;
 	
 	private User founder;
 	private Map<User, Double> donators;
@@ -182,7 +183,7 @@ public class Project {
 	}
 
 	public double getFundedPercentage() {
-		return fundedPercentage;
+		return Math.round(fundedPercentage);
 	}
 
 	public void setFundedPercentage(double fundedPercentage) {
@@ -200,6 +201,14 @@ public class Project {
 			return R.drawable.project_art;
 		}
 		return R.drawable.project_default;
+	}
+
+	public double getTunifundProfit() {
+		return Math.round(tunifundProfit);
+	}
+
+	public void setTunifundProfit(double tunifundProfit) {
+		this.tunifundProfit = tunifundProfit;
 	}
 	
 }
