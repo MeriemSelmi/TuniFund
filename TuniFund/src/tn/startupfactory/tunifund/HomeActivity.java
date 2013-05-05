@@ -74,11 +74,13 @@ public class HomeActivity extends SherlockFragmentActivity {
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch (item.getItemId()) {
 		case R.id.sign_in:		
-			Toast.makeText(HomeActivity.this, "Sign in", Toast.LENGTH_SHORT).show();
+			//Toast.makeText(HomeActivity.this, "Sign in", Toast.LENGTH_SHORT).show();
 			Intent mIntent = new Intent(HomeActivity.this,
 					AuthentificationActivity.class);
 			HomeActivity.this.startActivity(mIntent);
 			return true;
+			
+		
 
 		default:
 			return super.onOptionsItemSelected(item);

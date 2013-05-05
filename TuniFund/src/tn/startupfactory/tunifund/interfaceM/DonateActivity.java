@@ -2,31 +2,21 @@ package tn.startupfactory.tunifund.interfaceM;
 
 import tn.startupfactory.tunifund.HomeActivity;
 import tn.startupfactory.tunifund.R;
-<<<<<<< HEAD
-import tn.startupfactory.tunifund.R.layout;
-import tn.startupfactory.tunifund.R.menu;
 import tn.startupfactory.tunifund.servicemock.ProjectMock;
 import tn.startupfactory.tunifund.servicemock.UserMock;
-import tn.startupfactoy.tunifund.domain.Project;
-import tn.startupfactoy.tunifund.domain.User;
-=======
->>>>>>> dc1bd705c12396f4645d3a33d251b4fcf187dc92
 import tn.startupfactory.tunifund.session.ApplicationSession;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-<<<<<<< HEAD
-=======
-
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
->>>>>>> dc1bd705c12396f4645d3a33d251b4fcf187dc92
 
 public class DonateActivity extends SherlockActivity implements View.OnClickListener {
 
@@ -36,8 +26,9 @@ public class DonateActivity extends SherlockActivity implements View.OnClickList
 	int idUser;
 	int idProject;
 	double donation;
-	EditText amountText;
+	EditText amountText, actifText;
 	ApplicationSession appSession;
+	String actif;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		setTheme(R.style.Theme_Sherlock_Light);
@@ -47,9 +38,9 @@ public class DonateActivity extends SherlockActivity implements View.OnClickList
 		donate = (Button) findViewById(R.id.donate);
 		donate.setOnClickListener(this);
 		amountText = (EditText) findViewById(R.id.amount);
-		
+		actifText = (EditText) findViewById(R.id.amount);
 		idProject = getIntent().getExtras().getInt("idProject");
-		idUser = getIntent().getExtras().getInt("idUser");
+		idUser = ApplicationSession.id;
 		
 	}
 
@@ -72,19 +63,30 @@ public class DonateActivity extends SherlockActivity implements View.OnClickList
 		radioDonations = (RadioGroup) findViewById(R.id.radioDonations);
 		int idSelected = radioDonations.getCheckedRadioButtonId();
 		RadioButton radioButton = (RadioButton) radioDonations.findViewById(idSelected);
-		String selected = (String) radioButton.getText();
-		Log.d("aaaaaaaaaaaaaaaaaaaaaaaa" , selected);
+		actif = actifText.getText().toString();
+	//	String selected = (String) radioButton.getText();
+		Log.d("aaaaaaaaaaaaaaaaaaaaaaaa" , idUser+"");
 		try{
-			donation = Double.parseDouble(((EditText) findViewById(R.id.amount)).getText().toString());
+			if ("".equals(actif)) {
+				Toast.makeText(DonateActivity.this,
+						"Please provide all the informations",
+						Toast.LENGTH_SHORT).show();
+				return;
+			}
+			else
+			{
+			donation = Double.parseDouble(actif);
 			Log.d("eeee" , donation+"");
 			projectMock = ProjectMock.getInstance();
-			projectMock.donate(1, idProject, donation); ////////////////////:
+			projectMock.donate(idUser, idProject, donation); ////////////////////:
+			Log.d("aaaaaaaaaaaaaaaaaaaaaaaa" , idUser+"");
 			Intent intent=new Intent(DonateActivity.this,PdfActivity.class);
 			intent.putExtra("idProject", idProject);
-			intent.putExtra("idUser", 1);
+			Log.d("aaaaaaaaaaaaaaaaaaaaaaaa" , idUser+"");
 			intent.putExtra("donation", donation);
-			Log.d("donate", UserMock.getInstance().getById(1).getAccount()+""); /////////////////////
+			Log.d("donate", UserMock.getInstance().getById(idUser).getAccount()+""); /////////////////////
 			startActivity(intent);
+		}
 		}catch(Exception e){
 			Toast.makeText(getApplicationContext(), "Please enter a numeric value", Toast.LENGTH_LONG);
 		}

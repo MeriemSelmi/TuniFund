@@ -1,26 +1,23 @@
 
 package tn.startupfactory.tunifund.interfaceM;
 
-import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-
 import tn.startupfactory.tunifund.HomeActivity;
 import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.service.UserService;
 import tn.startupfactory.tunifund.servicemock.UserMock;
 import tn.startupfactory.tunifund.session.ApplicationSession;
 import tn.startupfactoy.tunifund.domain.User;
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import android.util.Log;
-import android.view.View;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
 
 public class AuthentificationActivity extends SherlockActivity implements
 		View.OnClickListener {
@@ -47,7 +44,7 @@ public class AuthentificationActivity extends SherlockActivity implements
 		if (v == valider) {
 			if ("".equals(cin) || "".equals(pass)) {
 				Toast.makeText(AuthentificationActivity.this,
-						"Les champs sont obligatoires", Toast.LENGTH_SHORT)
+						"Please give your CIN and password", Toast.LENGTH_SHORT)
 						.show();
 				return;
 			}
@@ -68,6 +65,9 @@ public class AuthentificationActivity extends SherlockActivity implements
 				
 			}
 
+		}else if(v == inscription){
+			Intent intent = new Intent(AuthentificationActivity.this, InscriptionActivity.class);
+			AuthentificationActivity.this.startActivity(intent);
 		}
 
 	}
@@ -85,14 +85,16 @@ public class AuthentificationActivity extends SherlockActivity implements
 	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
+		Intent mIntent;
 		switch (item.getItemId()) {
 		case R.id.homeD:		
 			Toast.makeText(AuthentificationActivity.this, "Home", Toast.LENGTH_SHORT).show();
-			Intent mIntent = new Intent(AuthentificationActivity.this,
+			mIntent = new Intent(AuthentificationActivity.this,
 					HomeActivity.class);
 			AuthentificationActivity.this.startActivity(mIntent);
 			return true;
-		case R.id.sign_in:return true;
+		case R.id.sign_in:
+			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}

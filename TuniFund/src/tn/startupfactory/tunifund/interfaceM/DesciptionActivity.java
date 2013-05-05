@@ -1,6 +1,5 @@
 package tn.startupfactory.tunifund.interfaceM;
 
-import tn.startupfactory.tunifund.HomeActivity;
 import tn.startupfactory.tunifund.R;
 import tn.startupfactory.tunifund.service.ProjectService;
 import tn.startupfactory.tunifund.servicemock.ProjectMock;
@@ -13,7 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -62,20 +60,21 @@ public class DesciptionActivity extends SherlockActivity implements
 
 	@Override
 	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
-		Intent intent=new Intent(DesciptionActivity.this,DonateActivity.class);
-		if(ApplicationSession.getId()!=""){
-			intent.putExtra("idUser", Integer.parseInt(ApplicationSession.getId()));
+		Intent intent;
+		if(ApplicationSession.id < 0){
+			intent=new Intent(DesciptionActivity.this,AuthentificationActivity.class);
+		}else{
+			intent=new Intent(DesciptionActivity.this,DonateActivity.class);
+			intent.putExtra("idProject", project.getId());
 		}
-		intent.putExtra("idProject", project.getId());
-		startActivity(intent);
 		
+		startActivity(intent);
 	}
 	
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {	
-		String userid = appSession.getId();
-		if (userid.equals("")) {
+	public boolean onCreateOptionsMenu(Menu menu) {
+		int userid = ApplicationSession.getInstance().getSession();
+		if (userid<0) {
 			getSupportMenuInflater().inflate(R.menu.action_bar_disconnected, menu);
 			return true;
 		}

@@ -2,6 +2,8 @@ package tn.startupfactory.tunifund.servicemock;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import android.util.Log;
 import tn.startupfactory.tunifund.service.UserService;
 import tn.startupfactoy.tunifund.domain.User;
 
@@ -12,7 +14,7 @@ public class UserMock implements UserService {
 	
 	private UserMock() {
 		users = new ArrayList<User>();
-		users.add(new User("cin1", "Mariem", "Nfaiedh", "mariem@nfaiedh.com", "12345", "Tunis", "mariem"));
+		users.add(new User("cin", "Foulen", "Ben Falten", "foulen@falten.com", "12345", "Tunis", "cin"));
 		users.add(new User("cin2", "Balkis", "Khouni", "balkis@khouni.com", "12345", "Tunis", "balkis"));
 		users.add(new User("cin3", "Meriem", "Selmi", "meriem@selmi.com", "12345", "Tunis", "meriem"));
 	}
@@ -20,7 +22,8 @@ public class UserMock implements UserService {
 	@Override
 	public long add(User user) {
 		for (User userIt : users) {
-			if(userIt.getCin().equals(userIt.getCin())){
+			if(userIt.getCin().equals(user.getCin())){
+				Log.d("userIdCinhgcfgfghghghgfhfhg", userIt.getCin());
 				return -1;
 			}
 		}

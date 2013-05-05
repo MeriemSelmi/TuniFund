@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import android.util.Log;
 import tn.startupfactory.tunifund.service.ProjectService;
 import tn.startupfactoy.tunifund.domain.Project;
 import tn.startupfactoy.tunifund.domain.Theme;
@@ -41,9 +43,10 @@ public class ProjectMock implements ProjectService {
 
 	@Override
 	public void donate(int idDonator, int idProject, double amount) throws Exception {
+		Log.d("tag", idDonator+" "+idProject);
 		User donator = userMock.getById(idDonator);
+		
 		userMock.debit(donator.getId(), amount);
-		donator.setAccount(donator.getAccount()- amount);
 		Project project = getById(idProject);
 		project.setFunded(project.getFunded() + amount);
 		if(project.getFunded() > project.getRequired()){
