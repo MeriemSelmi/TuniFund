@@ -6,5 +6,11 @@
         android:showAsAction="always"
         android:icon="@drawable/user"
         android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/home"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/user"
+        android:title="@string/home_icon_title"/>
 
 </menu>

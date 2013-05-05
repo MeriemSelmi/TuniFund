@@ -9,9 +9,12 @@ import tn.startupfactory.tunifund.adapter.MyPagerAdapter;
 import tn.startupfactory.tunifund.fragments.AllFragment;
 import tn.startupfactory.tunifund.fragments.NewFragment;
 import tn.startupfactory.tunifund.fragments.PopularFragment;
+import tn.startupfactory.tunifund.interfaceM.AuthentificationActivity;
+import tn.startupfactory.tunifund.interfaceM.DesciptionActivity;
 import tn.startupfactory.tunifund.session.ApplicationSession;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
@@ -34,7 +37,7 @@ public class HomeActivity extends SherlockFragmentActivity {
 		super.setContentView(R.layout.viewpager);
 		
 		HomeContext = getApplicationContext();
-		appSession = new ApplicationSession();
+		appSession = ApplicationSession.getInstance();
 		List<Fragment> fragments = new Vector<Fragment>();
 
 		fragments.add(Fragment.instantiate(this,NewFragment.class.getName()));
@@ -55,8 +58,8 @@ public class HomeActivity extends SherlockFragmentActivity {
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {	
-		String userid = appSession.getId();
-		if (userid.equals("")) {
+		int userid = appSession.getSession();
+		if (userid <0) {
 			getSupportMenuInflater().inflate(R.menu.action_bar_disconnected, menu);
 			return true;
 		}
@@ -70,7 +73,10 @@ public class HomeActivity extends SherlockFragmentActivity {
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch (item.getItemId()) {
 		case R.id.sign_in:		
-			Toast.makeText(HomeActivity.this, "", Toast.LENGTH_SHORT).show();
+			Toast.makeText(HomeActivity.this, "Sign in", Toast.LENGTH_SHORT).show();
+			Intent mIntent = new Intent(HomeActivity.this,
+					AuthentificationActivity.class);
+			HomeActivity.this.startActivity(mIntent);
 			return true;
 
 		default:

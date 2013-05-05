@@ -49,9 +49,9 @@ public class AddProjectActivity extends Activity {
 		
 		ProjectService projectService = ProjectMock.getInstance();
 		Project project=new Project(name.getText().toString(),description.getText().toString(),Double.valueOf(amount.getText().toString()),Integer.parseInt(dayToGo.getText().toString()),theme.getText().toString(),new User(),country.getText().toString());
-		String userid = appSession.getId();		
-		projectService.add(Integer.parseInt(userid), project);
-		Toast.makeText(AddProjectActivity.this,"projet ajouté!",Toast.LENGTH_SHORT).show();
+		int userid = appSession.getInstance().getSession();		
+		projectService.add(userid, project);
+		Toast.makeText(AddProjectActivity.this,"Congrats! Your project is created !",Toast.LENGTH_SHORT).show();
 		Intent intent=new Intent(AddProjectActivity.this,HomeActivity.class);
 		startActivity(intent);
 		
