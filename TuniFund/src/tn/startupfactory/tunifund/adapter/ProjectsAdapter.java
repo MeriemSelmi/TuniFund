@@ -3,11 +3,19 @@ package tn.startupfactory.tunifund.adapter;
 import java.util.List;
 
 
+import tn.startupfactory.tunifund.HomeActivity;
 import tn.startupfactory.tunifund.R;
+import tn.startupfactory.tunifund.interfaceM.DesciptionActivity;
+import tn.startupfactory.tunifund.interfaceM.DonateActivity;
+import tn.startupfactory.tunifund.interfaceM.PdfActivity;
+import tn.startupfactory.tunifund.session.ApplicationSession;
 import tn.startupfactoy.tunifund.domain.Project;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -51,10 +59,26 @@ public class ProjectsAdapter extends BaseAdapter{
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
+		final int pos = position;
 		if (convertView == null) {
 			holder = new ViewHolder();
 			convertView = inflater.inflate(R.layout.item_project, null);
 			holder.image = (ImageView) convertView.findViewById(R.id.image);
+			OnClickListener l = new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					
+					Intent mIntent = new Intent(HomeActivity.HomeContext, DesciptionActivity.class);
+					mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					if(ApplicationSession.getId()!=""){
+						mIntent.putExtra("idUser", Integer.parseInt(ApplicationSession.getId()));}
+					mIntent.putExtra("idProject", 1);
+					
+					HomeActivity.HomeContext.startActivity(mIntent);
+				}
+			};
+			holder.image.setOnClickListener(l);
 			holder.nom = (TextView) convertView.findViewById(R.id.nom);
 			
 			convertView.setTag(holder);

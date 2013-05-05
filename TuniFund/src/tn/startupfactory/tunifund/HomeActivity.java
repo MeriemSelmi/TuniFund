@@ -11,6 +11,7 @@ import tn.startupfactory.tunifund.fragments.NewFragment;
 import tn.startupfactory.tunifund.fragments.PopularFragment;
 import tn.startupfactory.tunifund.session.ApplicationSession;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
@@ -24,6 +25,7 @@ public class HomeActivity extends SherlockFragmentActivity {
 
 	private PagerAdapter mPagerAdapter;
 	ApplicationSession appSession;
+	public static Context HomeContext;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class HomeActivity extends SherlockFragmentActivity {
 		super.onCreate(savedInstanceState);
 		super.setContentView(R.layout.viewpager);
 		
+		HomeContext = getApplicationContext();
 		appSession = new ApplicationSession();
 		List<Fragment> fragments = new Vector<Fragment>();
 
@@ -48,17 +51,16 @@ public class HomeActivity extends SherlockFragmentActivity {
 		pager.setCurrentItem(3);
 	}
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		appSession = (ApplicationSession)getApplication();
-		String userid = appSession.getId();
+	public boolean onCreateOptionsMenu(Menu menu) {	
+		/*String userid = appSession.getId();
 		if (userid.equals("")) {
 			getSupportMenuInflater().inflate(R.menu.action_bar_disconnected, menu);
 			return true;
 		}
 		else{
-			getSupportMenuInflater().inflate(R.menu.action_bar_connected, menu);
+			getSupportMenuInflater().inflate(R.menu.action_bar_connected, menu);*/
 			return true;
-		}
+		//}
 	}
 	
 	@Override

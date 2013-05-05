@@ -3,7 +3,7 @@
     android:id="@+id/gridview"
     android:layout_width="fill_parent"
     android:layout_height="400dp"
-    android:columnWidth="240dp"
+	android:columnWidth="200dp"
     android:gravity="center"
     android:numColumns="2"
     android:stretchMode="none"
